@@ -6,6 +6,7 @@ using Gaddzeit.VetAdmin.Presenter;
 using Gaddzeit.VetAdmin.View;
 using NUnit.Framework;
 using Rhino.Mocks;
+using Rhino.Mocks.Interfaces;
 
 namespace Gaddzeit.VetAdmin.Tests.Unit
 {
@@ -30,7 +31,6 @@ namespace Gaddzeit.VetAdmin.Tests.Unit
             _mockRepository.VerifyAll();
         }
 
-
         [Test]
         public void Constructor_ViewInput_AttachesEvents()
         {
@@ -40,6 +40,19 @@ namespace Gaddzeit.VetAdmin.Tests.Unit
             _mockRepository.ReplayAll();
 
             var sut = new HomePresenter(_homeView);
+        }
+
+        [Test]
+        public void InitializeEvent_Raised_SetsTitleToWelcome()
+        {
+            _homeView.Initialize += null;
+            var initializeEvent = LastCall.IgnoreArguments().GetEventRaiser();
+            _homeView.PageTitle = "Welcome";
+
+            _mockRepository.ReplayAll();
+
+            var sut = new HomePresenter(_homeView);
+            initializeEvent.Raise(_homeView, EventArgs.Empty);
         }
     }
 }

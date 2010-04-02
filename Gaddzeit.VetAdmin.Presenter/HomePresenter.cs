@@ -13,9 +13,9 @@ namespace Gaddzeit.VetAdmin.Presenter
             _homeView.Initialize += new System.EventHandler(HomeViewInitialize);
         }
 
-        static void HomeViewInitialize(object sender, System.EventArgs e)
+        public void HomeViewInitialize(object sender, System.EventArgs e)
         {
-            throw new System.NotImplementedException();
+            _homeView.PageTitle = "Welcome";
         }
     }
 }
