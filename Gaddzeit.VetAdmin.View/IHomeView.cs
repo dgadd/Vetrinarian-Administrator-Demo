@@ -5,5 +5,6 @@ namespace Gaddzeit.VetAdmin.View
     public interface IHomeView
     {
         event EventHandler Initialize;
+        string PageTitle { set; }
     }
 }
