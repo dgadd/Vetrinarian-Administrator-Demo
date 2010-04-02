@@ -47,7 +47,7 @@ namespace Gaddzeit.VetAdmin.Tests.Unit
         {
             _homeView.Initialize += null;
             var initializeEvent = LastCall.IgnoreArguments().GetEventRaiser();
-            _homeView.PageTitle = "Welcome";
+            _homeView.PageTitle = "Welcome to the Vetrinary Admin Application!";
 
             _mockRepository.ReplayAll();
 

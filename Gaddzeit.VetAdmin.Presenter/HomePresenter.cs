@@ -15,7 +15,7 @@ namespace Gaddzeit.VetAdmin.Presenter
 
         public void HomeViewInitialize(object sender, System.EventArgs e)
         {
-            _homeView.PageTitle = "Welcome";
+            _homeView.PageTitle = "Welcome to the Vetrinary Admin Application!";
         }
     }
 }
