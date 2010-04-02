@@ -1,0 +1,5 @@
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.View\bin\Debug\Gaddzeit.VetAdmin.View.dll
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.View\bin\Debug\Gaddzeit.VetAdmin.View.pdb
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.View\obj\Debug\ResolveAssemblyReference.cache
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.View\obj\Debug\Gaddzeit.VetAdmin.View.dll
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.View\obj\Debug\Gaddzeit.VetAdmin.View.pdb

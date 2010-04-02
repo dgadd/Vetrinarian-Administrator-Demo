@@ -1,0 +1,6 @@
+<Modules>
+  <Module PersistentId="7976188D-7A35-4F82-B9A7-00EB9D3B9215" ModuleId="Gaddzeit.Tests.Unit" />
+  <Module PersistentId="81DE3DDC-E6C8-45FB-BF6D-2F9EA92F8359" ModuleId="Gaddzeit.VetAdmin.View" />
+  <Module PersistentId="151DAA29-11C9-4F3A-8121-70468C1E5275" ModuleId="Gaddzeit.VetAdmin.Tests.Unit" />
+  <Module PersistentId="D892B94F-F3B2-4FD6-A8EF-0FB7E76C36D4" ModuleId="Gaddzeit.VetAdmin.Presenter" />
+</Modules>
