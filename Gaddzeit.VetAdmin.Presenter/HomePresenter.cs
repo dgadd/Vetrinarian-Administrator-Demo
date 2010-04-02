@@ -15,7 +15,7 @@ namespace Gaddzeit.VetAdmin.Presenter
 
         public void HomeViewInitialize(object sender, System.EventArgs e)
         {
-            _homeView.PageTitle = "Welcome, Vetrinary Adinistrator!";
+            _homeView.PageTitle = "This label set from IView.Title upon IView.Initialize event raised.";
         }
     }
 }
