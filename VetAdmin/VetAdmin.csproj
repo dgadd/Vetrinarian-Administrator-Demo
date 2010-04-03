@@ -57,6 +57,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddPet.aspx.cs">
+      <DependentUpon>AddPet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddPet.aspx.designer.cs">
+      <DependentUpon>AddPet.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>Default.aspx</DependentUpon>
@@ -65,16 +72,34 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Support\MasterPages\VetAdminMaster.Master.cs">
+      <DependentUpon>VetAdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Support\MasterPages\VetAdminMaster.Master.designer.cs">
+      <DependentUpon>VetAdminMaster.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Gaddzeit.VetAdmin.Presenter\Gaddzeit.VetAdmin.Presenter.csproj">
       <Project>{D892B94F-F3B2-4FD6-A8EF-0FB7E76C36D4}</Project>
       <Name>Gaddzeit.VetAdmin.Presenter</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Gaddzeit.VetAdmin.Repository\Gaddzeit.VetAdmin.Repository.csproj">
+      <Project>{6358F822-C39C-4007-AAFC-BFBF876F60E7}</Project>
+      <Name>Gaddzeit.VetAdmin.Repository</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Gaddzeit.VetAdmin.View\Gaddzeit.VetAdmin.View.csproj">
       <Project>{81DE3DDC-E6C8-45FB-BF6D-2F9EA92F8359}</Project>
       <Name>Gaddzeit.VetAdmin.View</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AddPet.aspx" />
+    <Content Include="Support\Css\vetAdmin.css" />
+    <Content Include="Support\MasterPages\VetAdminMaster.Master" />
+    <Content Include="Support\Pics\petCat.jpg" />
+    <Content Include="Support\Pics\petDog.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

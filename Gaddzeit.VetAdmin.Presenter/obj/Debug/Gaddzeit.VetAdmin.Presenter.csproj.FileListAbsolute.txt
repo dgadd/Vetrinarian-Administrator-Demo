@@ -5,3 +5,7 @@ C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Presenter\bin\Debug
 C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Presenter\obj\Debug\ResolveAssemblyReference.cache
 C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Presenter\obj\Debug\Gaddzeit.VetAdmin.Presenter.dll
 C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Presenter\obj\Debug\Gaddzeit.VetAdmin.Presenter.pdb
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Presenter\bin\Debug\Gaddzeit.VetAdmin.Repository.dll
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Presenter\bin\Debug\Gaddzeit.VetAdmin.Repository.pdb
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Presenter\bin\Debug\Gaddzeit.VetAdmin.Domain.dll
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Presenter\bin\Debug\Gaddzeit.VetAdmin.Domain.pdb

@@ -1,12 +1,12 @@
 <publishData>
   <publishTarget publishUrl="C:\SourceCode\Gaddzeitcom_WebSite\VetrinaryAdmin\">
-    <file relUrl="bin/Gaddzeit.VetAdmin.View.pdb" publishTime="04/01/2010 21:02:02" />
-    <file relUrl="bin/Gaddzeit.VetAdmin.Presenter.pdb" publishTime="04/01/2010 21:18:13" />
+    <file relUrl="bin/Gaddzeit.VetAdmin.View.pdb" publishTime="04/01/2010 21:43:36" />
+    <file relUrl="bin/Gaddzeit.VetAdmin.Presenter.pdb" publishTime="04/01/2010 21:44:40" />
     <file relUrl="Web.config" publishTime="04/01/2010 21:15:30" />
     <file relUrl="Default.aspx" publishTime="04/01/2010 21:19:00" />
-    <file relUrl="bin/VetAdmin.dll" publishTime="04/01/2010 21:19:24" />
-    <file relUrl="bin/Gaddzeit.VetAdmin.Presenter.dll" publishTime="04/01/2010 21:18:13" />
-    <file relUrl="bin/Gaddzeit.VetAdmin.View.dll" publishTime="04/01/2010 21:02:03" />
-    <file relUrl="bin/VetAdmin.pdb" publishTime="04/01/2010 21:19:24" />
+    <file relUrl="bin/VetAdmin.dll" publishTime="04/01/2010 21:44:40" />
+    <file relUrl="bin/Gaddzeit.VetAdmin.Presenter.dll" publishTime="04/01/2010 21:44:40" />
+    <file relUrl="bin/Gaddzeit.VetAdmin.View.dll" publishTime="04/01/2010 21:43:36" />
+    <file relUrl="bin/VetAdmin.pdb" publishTime="04/01/2010 21:44:40" />
   </publishTarget>
 </publishData>

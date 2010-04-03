@@ -47,7 +47,7 @@ namespace Gaddzeit.VetAdmin.Tests.Unit
         {
             _homeView.Initialize += null;
             var initializeEvent = LastCall.IgnoreArguments().GetEventRaiser();
-            _homeView.PageTitle = "This label set from IView.Title upon IView.Initialize event raised.";
+            _homeView.PageTitle = string.Format("Logged in at {0}", DateTime.Now.ToString());
 
             _mockRepository.ReplayAll();
 

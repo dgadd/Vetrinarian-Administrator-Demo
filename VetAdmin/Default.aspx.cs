@@ -16,13 +16,11 @@ namespace VetAdmin
         protected override void OnInit(EventArgs e)
         {
             _homePresenter = new HomePresenter(this);
-            base.OnInit(e);
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (this.Initialize != null)
-                this.Initialize(this, EventArgs.Empty);
+            if (this.Initialize != null) this.Initialize(this, EventArgs.Empty);
         }
 
         public event EventHandler Initialize;

@@ -1,4 +1,5 @@
-﻿using Gaddzeit.VetAdmin.View;
+﻿using System;
+using Gaddzeit.VetAdmin.View;
 
 namespace Gaddzeit.VetAdmin.Presenter
 {
@@ -15,7 +16,7 @@ namespace Gaddzeit.VetAdmin.Presenter
 
         public void HomeViewInitialize(object sender, System.EventArgs e)
         {
-            _homeView.PageTitle = "This label set from IView.Title upon IView.Initialize event raised.";
+            _homeView.PageTitle = string.Format("Logged in at {0}", DateTime.Now.ToString());
         }
     }
 }

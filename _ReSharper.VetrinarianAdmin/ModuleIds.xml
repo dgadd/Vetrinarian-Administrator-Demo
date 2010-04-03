@@ -1,6 +1,8 @@
 <Modules>
-  <Module PersistentId="7976188D-7A35-4F82-B9A7-00EB9D3B9215" ModuleId="Gaddzeit.Tests.Unit" />
   <Module PersistentId="81DE3DDC-E6C8-45FB-BF6D-2F9EA92F8359" ModuleId="Gaddzeit.VetAdmin.View" />
   <Module PersistentId="151DAA29-11C9-4F3A-8121-70468C1E5275" ModuleId="Gaddzeit.VetAdmin.Tests.Unit" />
   <Module PersistentId="D892B94F-F3B2-4FD6-A8EF-0FB7E76C36D4" ModuleId="Gaddzeit.VetAdmin.Presenter" />
+  <Module PersistentId="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F" ModuleId="VetAdmin" />
+  <Module PersistentId="8FFB410B-C23E-44C5-A470-FA87EE423B4C" ModuleId="Gaddzeit.VetAdmin.Domain" />
+  <Module PersistentId="6358F822-C39C-4007-AAFC-BFBF876F60E7" ModuleId="Gaddzeit.VetAdmin.Repository" />
 </Modules>
