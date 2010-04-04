@@ -37,6 +37,8 @@ namespace Gaddzeit.VetAdmin.Domain
             get { return _petName; }
         }
 
+        public string HealthHistory { get; set; }
+
         public override bool Equals(object obj)
         {
             var other = (Pet) obj;
