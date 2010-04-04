@@ -7,7 +7,7 @@ namespace Gaddzeit.VetAdmin.Repository
     {
         public void SavePet(Pet pet)
         {
-            throw new NotImplementedException();
+            // call to db or other persitance storage goes here
         }
     }
 }

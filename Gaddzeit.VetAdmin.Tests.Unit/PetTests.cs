@@ -11,7 +11,7 @@ namespace Gaddzeit.VetAdmin.Tests.Unit
     public class PetTests
     {
         [Test]
-        public void Constructor_NameBreedAgeIdInput_MatchesProperties()
+        public void Constructor_NameBreedAgeAndIdInput_MatchesProperties()
         {
             const string petName = "Fido";
             const string breed = "pug";
@@ -34,6 +34,19 @@ namespace Gaddzeit.VetAdmin.Tests.Unit
             var sut1 = new Pet(petName, breed, age, id);
             var sut2 = new Pet(petName, breed, age, id);
             Assert.IsTrue(sut1.Equals(sut2));
+        }
+
+        [Test]
+        public void HealthHistoryProperty_Set_GetMatchesInput()
+        {
+            const string petName = "Fido";
+            const string breed = "pug";
+            const int age = 8;
+            var id = Guid.NewGuid();
+            var sut = new Pet(petName, breed, age, id);
+            const string healthHistory = "Has had cysts removed on 3 occasions, risk of diabetes.";
+            sut.HealthHistory = healthHistory;
+            Assert.AreEqual(healthHistory, sut.HealthHistory);
         }
     }
 }
