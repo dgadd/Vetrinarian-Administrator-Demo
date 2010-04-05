@@ -20,7 +20,7 @@ namespace Gaddzeit.VetAdmin.Presenter
         void AddPetViewSavePet(object sender, System.EventArgs e)
         {
             if (!AreViewInputsValid()) return;
-            var pet = new Pet(_addPetView.Name, _addPetView.Breed, _addPetView.Age, _addPetView.Id);
+            var pet = new Pet(_addPetView.Name, _addPetView.Breed, _addPetView.Age);
             pet.HealthHistory = _addPetView.HealthHistory;
             _petRepository.SavePet(pet);
             _addPetView.Message = "Saved. (No page redirect yet.)";
