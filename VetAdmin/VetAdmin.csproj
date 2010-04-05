@@ -99,7 +99,6 @@
     <Content Include="Support\Css\vetAdmin.css" />
     <Content Include="Support\MasterPages\VetAdminMaster.Master" />
     <Content Include="Support\Pics\petCat.jpg" />
-    <Content Include="Support\Pics\petDog.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

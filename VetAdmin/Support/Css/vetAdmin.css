@@ -5,7 +5,7 @@
 				top:40px;
 				height:80px;
 				left:10px;
-				width:800px;
+				width:820px;
 				font-size:x-large;
 }
 .bodyOrange {
@@ -15,7 +15,7 @@
 }
 .main {
 				background-color:white;
-				padding:10px;
+				padding:20px;
 				position:absolute;
 				top:120px;
 				left:160px;
@@ -31,12 +31,12 @@
 				top:10px;
 				height:25px;
 				left:10px;
-				width:800px;
+				width:820px;
 }
 .leftNavBar {
+				background-color: #CAE4FF;
 				padding:20px;
 				font-size:small;
-				background-color: #CAE4FF;
 				position:absolute;
 				top:120px;
 				left:10px;

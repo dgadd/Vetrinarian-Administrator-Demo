@@ -43,6 +43,7 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -54,7 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddPetPresenterTests.cs" />
+    <Compile Include="HomeControllerTests.cs" />
     <Compile Include="HomePresenterTests.cs" />
+    <Compile Include="PetManagementControllerTests.cs" />
     <Compile Include="PetTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -74,6 +77,10 @@
     <ProjectReference Include="..\Gaddzeit.VetAdmin.View\Gaddzeit.VetAdmin.View.csproj">
       <Project>{81DE3DDC-E6C8-45FB-BF6D-2F9EA92F8359}</Project>
       <Name>Gaddzeit.VetAdmin.View</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VetAdminMvc\VetAdminMvc.csproj">
+      <Project>{0374D8EC-BC49-441D-96F5-F08CFE7107B2}</Project>
+      <Name>VetAdminMvc</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

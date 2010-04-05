@@ -9,10 +9,13 @@
 </head>
 <body class="bodyOrange">
     <form id="form1" runat="server">
-    <div class="goBackTop"><a href="http://gaddzeit.com">[gaddzeit.com]</a></div>
+    <div class="goBackTop"><a href="http://gaddzeit.com">[gaddzeit.com]</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Demonstration site for ASP.NET with Model-View-Presenter
+    </div>
     <div class="lightYellowHeader">
-    &nbsp;<img alt="petCat" src="../Pics/petCat.jpg" />
-    Vet Admin   <a href="http://codingsolutions.blogspot.com/2010/01/linking-tdd-kata-to-creating-user.html">(original user stories)</a>
+    &nbsp;<img alt="petCat" src="Support/Pics/petCat.jpg" />
+    Vet Admin   <a href="http://codingsolutions.blogspot.com/2010/01/linking-tdd-kata-to-creating-user.html">(user stories for app)</a>
     </div>
     <div class="leftNavBar">
     <a href="AddPet.aspx">Add Pet</a>

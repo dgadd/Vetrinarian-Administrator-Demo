@@ -1,0 +1,13 @@
+C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\VetAdminMvc.dll
+C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\VetAdminMvc.pdb
+C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\obj\Debug\ResolveAssemblyReference.cache
+C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\obj\Debug\VetAdminMvc.dll
+C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\obj\Debug\VetAdminMvc.pdb
+C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\System.Web.Abstractions.dll
+C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\System.Web.Mvc.dll
+C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\System.Web.Routing.dll
+C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\System.Web.Mvc.xml
+C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\Gaddzeit.VetAdmin.Repository.dll
+C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\Gaddzeit.VetAdmin.Domain.dll
+C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\Gaddzeit.VetAdmin.Repository.pdb
+C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\Gaddzeit.VetAdmin.Domain.pdb

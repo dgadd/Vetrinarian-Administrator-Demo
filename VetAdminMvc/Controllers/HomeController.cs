@@ -11,7 +11,7 @@ namespace VetAdminMvc.Controllers
     {
         public ActionResult Index()
         {
-            ViewData["Message"] = "Welcome to ASP.NET MVC!";
+            ViewData["Message"] = string.Format("Welcome to ASP.NET MVC site. Logged in at {0}", DateTime.Now.ToString());
 
             return View();
         }

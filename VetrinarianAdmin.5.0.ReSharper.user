@@ -12,49 +12,56 @@
       <File id="D892B94F-F3B2-4FD6-A8EF-0FB7E76C36D4/f:HomePresenter.cs" caret="176" fromTop="7" />
       <File id="151DAA29-11C9-4F3A-8121-70468C1E5275/f:HomePresenterTests.cs" caret="1059" fromTop="28" />
       <File id="6358F822-C39C-4007-AAFC-BFBF876F60E7/f:IPetRepository.cs" caret="146" fromTop="5" />
-      <File id="81DE3DDC-E6C8-45FB-BF6D-2F9EA92F8359/f:IAddPetView.cs" caret="234" fromTop="9" />
-      <File id="151DAA29-11C9-4F3A-8121-70468C1E5275/f:PetTests.cs" caret="236" fromTop="1" />
-      <File id="8FFB410B-C23E-44C5-A470-FA87EE423B4C/f:Pet.cs" caret="559" fromTop="3" />
-      <File id="151DAA29-11C9-4F3A-8121-70468C1E5275/f:AddPetPresenterTests.cs" caret="2180" fromTop="29" />
-      <File id="D892B94F-F3B2-4FD6-A8EF-0FB7E76C36D4/f:AddPetPresenter.cs" caret="792" fromTop="21" />
-      <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/f:Default.aspx" caret="0" fromTop="0" />
-      <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/d:Support/d:MasterPages/f:VetAdminMaster.Master" caret="0" fromTop="0" />
-      <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/f:AddPet.aspx" caret="543" fromTop="7" />
       <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/f:Default.aspx.cs" caret="454" fromTop="11" />
-      <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/f:AddPet.aspx.cs" caret="1214" fromTop="30" />
-      <File id="6358F822-C39C-4007-AAFC-BFBF876F60E7/f:FakePetRepository.aspx.cs" caret="214" fromTop="8" />
+      <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/f:Web.config" caret="3059" fromTop="7" />
+      <File id="6358F822-C39C-4007-AAFC-BFBF876F60E7/f:FakePetRepository.aspx.cs" caret="265" fromTop="8" />
+      <File id="8FFB410B-C23E-44C5-A470-FA87EE423B4C/f:Pet.cs" caret="726" fromTop="2" />
+      <File id="151DAA29-11C9-4F3A-8121-70468C1E5275/f:PetTests.cs" caret="755" fromTop="13" />
+      <File id="81DE3DDC-E6C8-45FB-BF6D-2F9EA92F8359/f:IAddPetView.cs" caret="340" fromTop="13" />
+      <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/f:AddPet.aspx.designer.cs" caret="2480" fromTop="12" />
+      <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/f:AddPet.aspx.cs" caret="1739" fromTop="26" />
+      <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/f:AddPet.aspx" caret="1074" fromTop="15" />
+      <File id="151DAA29-11C9-4F3A-8121-70468C1E5275/f:AddPetPresenterTests.cs" caret="2410" fromTop="24" />
+      <File id="D892B94F-F3B2-4FD6-A8EF-0FB7E76C36D4/f:AddPetPresenter.cs" caret="0" fromTop="0" />
+      <File id="0374D8EC-BC49-441D-96F5-F08CFE7107B2/f:Default.aspx" caret="0" fromTop="0" />
+      <File id="0374D8EC-BC49-441D-96F5-F08CFE7107B2/d:Controllers/f:HomeController.cs" caret="357" fromTop="14" />
+      <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/f:Default.aspx" caret="0" fromTop="0" />
+      <File id="0374D8EC-BC49-441D-96F5-F08CFE7107B2/f:Default.aspx.cs" caret="680" fromTop="16" />
+      <File id="0374D8EC-BC49-441D-96F5-F08CFE7107B2/d:Views/d:Home/f:Index.aspx" caret="66" fromTop="0" />
+      <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/d:Support/d:MasterPages/f:VetAdminMaster.Master" caret="0" fromTop="0" />
+      <File id="0374D8EC-BC49-441D-96F5-F08CFE7107B2/d:Views/d:Shared/f:Site.Master" caret="415" fromTop="7" />
     </RecentFiles>
     <RecentEdits>
-      <File id="151DAA29-11C9-4F3A-8121-70468C1E5275/f:AddPetPresenterTests.cs" caret="1661" fromTop="24" />
-      <File id="6358F822-C39C-4007-AAFC-BFBF876F60E7/f:IPetRepository.cs" caret="146" fromTop="5" />
-      <File id="151DAA29-11C9-4F3A-8121-70468C1E5275/f:AddPetPresenterTests.cs" caret="2155" fromTop="24" />
-      <File id="151DAA29-11C9-4F3A-8121-70468C1E5275/f:PetTests.cs" caret="330" fromTop="12" />
-      <File id="8FFB410B-C23E-44C5-A470-FA87EE423B4C/f:Pet.cs" caret="307" fromTop="10" />
-      <File id="8FFB410B-C23E-44C5-A470-FA87EE423B4C/f:Pet.cs" caret="432" fromTop="16" />
-      <File id="8FFB410B-C23E-44C5-A470-FA87EE423B4C/f:Pet.cs" caret="237" fromTop="8" />
-      <File id="151DAA29-11C9-4F3A-8121-70468C1E5275/f:PetTests.cs" caret="743" fromTop="19" />
-      <File id="151DAA29-11C9-4F3A-8121-70468C1E5275/f:AddPetPresenterTests.cs" caret="1492" fromTop="17" />
-      <File id="81DE3DDC-E6C8-45FB-BF6D-2F9EA92F8359/f:IAddPetView.cs" caret="234" fromTop="9" />
-      <File id="151DAA29-11C9-4F3A-8121-70468C1E5275/f:AddPetPresenterTests.cs" caret="1929" fromTop="25" />
-      <File id="D892B94F-F3B2-4FD6-A8EF-0FB7E76C36D4/f:AddPetPresenter.cs" caret="748" fromTop="14" />
-      <File id="151DAA29-11C9-4F3A-8121-70468C1E5275/f:PetTests.cs" caret="818" fromTop="18" />
-      <File id="151DAA29-11C9-4F3A-8121-70468C1E5275/f:PetTests.cs" caret="1166" fromTop="26" />
-      <File id="8FFB410B-C23E-44C5-A470-FA87EE423B4C/f:Pet.cs" caret="865" fromTop="22" />
-      <File id="8FFB410B-C23E-44C5-A470-FA87EE423B4C/f:Pet.cs" caret="1303" fromTop="29" />
-      <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/f:Default.aspx" caret="0" fromTop="0" />
-      <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/f:AddPet.aspx" caret="543" fromTop="7" />
-      <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/f:AddPet.aspx" caret="701" fromTop="7" />
-      <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/f:AddPet.aspx.cs" caret="0" fromTop="0" />
-      <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/f:AddPet.aspx.cs" caret="1395" fromTop="28" />
-      <File id="6358F822-C39C-4007-AAFC-BFBF876F60E7/f:FakePetRepository.aspx.cs" caret="48" fromTop="1" />
-      <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/f:AddPet.aspx.cs" caret="567" fromTop="17" />
-      <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/f:AddPet.aspx.cs" caret="777" fromTop="23" />
-      <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/f:AddPet.aspx.cs" caret="914" fromTop="15" />
-      <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/f:AddPet.aspx.cs" caret="1010" fromTop="20" />
-      <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/f:AddPet.aspx.cs" caret="430" fromTop="14" />
-      <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/f:AddPet.aspx.cs" caret="1360" fromTop="28" />
-      <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/f:AddPet.aspx.cs" caret="1110" fromTop="16" />
-      <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/f:AddPet.aspx.cs" caret="1214" fromTop="23" />
+      <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/f:AddPet.aspx.cs" caret="1209" fromTop="21" />
+      <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/f:AddPet.aspx.cs" caret="1207" fromTop="14" />
+      <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/f:AddPet.aspx" caret="420" fromTop="6" />
+      <File id="81DE3DDC-E6C8-45FB-BF6D-2F9EA92F8359/f:IAddPetView.cs" caret="318" fromTop="11" />
+      <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/f:AddPet.aspx.cs" caret="336" fromTop="11" />
+      <File id="D892B94F-F3B2-4FD6-A8EF-0FB7E76C36D4/f:AddPetPresenter.cs" caret="650" fromTop="20" />
+      <File id="D892B94F-F3B2-4FD6-A8EF-0FB7E76C36D4/f:AddPetPresenter.cs" caret="1657" fromTop="26" />
+      <File id="D892B94F-F3B2-4FD6-A8EF-0FB7E76C36D4/f:AddPetPresenter.cs" caret="1657" fromTop="28" />
+      <File id="D892B94F-F3B2-4FD6-A8EF-0FB7E76C36D4/f:AddPetPresenter.cs" caret="1657" fromTop="28" />
+      <File id="D892B94F-F3B2-4FD6-A8EF-0FB7E76C36D4/f:AddPetPresenter.cs" caret="1657" fromTop="28" />
+      <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/f:AddPet.aspx.cs" caret="1739" fromTop="24" />
+      <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/f:AddPet.aspx" caret="1074" fromTop="15" />
+      <File id="D892B94F-F3B2-4FD6-A8EF-0FB7E76C36D4/f:AddPetPresenter.cs" caret="1108" fromTop="8" />
+      <File id="D892B94F-F3B2-4FD6-A8EF-0FB7E76C36D4/f:AddPetPresenter.cs" caret="1243" fromTop="13" />
+      <File id="D892B94F-F3B2-4FD6-A8EF-0FB7E76C36D4/f:AddPetPresenter.cs" caret="1428" fromTop="18" />
+      <File id="D892B94F-F3B2-4FD6-A8EF-0FB7E76C36D4/f:AddPetPresenter.cs" caret="1604" fromTop="23" />
+      <File id="D892B94F-F3B2-4FD6-A8EF-0FB7E76C36D4/f:AddPetPresenter.cs" caret="969" fromTop="5" />
+      <File id="151DAA29-11C9-4F3A-8121-70468C1E5275/f:AddPetPresenterTests.cs" caret="2410" fromTop="24" />
+      <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/d:Support/d:MasterPages/f:VetAdminMaster.Master" caret="967" fromTop="13" />
+      <File id="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F/d:Support/d:MasterPages/f:VetAdminMaster.Master" caret="662" fromTop="11" />
+      <File id="0374D8EC-BC49-441D-96F5-F08CFE7107B2/d:Views/d:Shared/f:Site.Master" caret="0" fromTop="25" />
+      <File id="0374D8EC-BC49-441D-96F5-F08CFE7107B2/d:Views/d:Shared/f:Site.Master" caret="0" fromTop="0" />
+      <File id="0374D8EC-BC49-441D-96F5-F08CFE7107B2/d:Views/d:Shared/f:Site.Master" caret="1123" fromTop="5" />
+      <File id="0374D8EC-BC49-441D-96F5-F08CFE7107B2/d:Controllers/f:HomeController.cs" caret="375" fromTop="16" />
+      <File id="0374D8EC-BC49-441D-96F5-F08CFE7107B2/d:Views/d:Home/f:Index.aspx" caret="258" fromTop="19" />
+      <File id="0374D8EC-BC49-441D-96F5-F08CFE7107B2/d:Views/d:Home/f:Index.aspx" caret="230" fromTop="17" />
+      <File id="0374D8EC-BC49-441D-96F5-F08CFE7107B2/d:Views/d:Home/f:Index.aspx" caret="66" fromTop="0" />
+      <File id="0374D8EC-BC49-441D-96F5-F08CFE7107B2/d:Views/d:Shared/f:Site.Master" caret="414" fromTop="7" />
+      <File id="0374D8EC-BC49-441D-96F5-F08CFE7107B2/d:Views/d:Shared/f:Site.Master" caret="921" fromTop="17" />
+      <File id="0374D8EC-BC49-441D-96F5-F08CFE7107B2/d:Views/d:Shared/f:Site.Master" caret="700" fromTop="13" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -74,11 +81,11 @@
       <Item value="Framework" priority="0" />
       <Item value="Rhino.Mocks" priority="1" />
       <Item value="TestFixture" priority="2" />
-      <Item value="public" priority="6" />
+      <Item value="public" priority="7" />
       <Item value="private" priority="3" />
       <Item value="MockRepository`0" priority="0" />
       <Item value="SetUp" priority="0" />
-      <Item value="void" priority="3" />
+      <Item value="void" priority="4" />
       <Item value="VetAdmin.View" priority="0" />
       <Item value="_mockRepository" priority="5" />
       <Item value="new" priority="7" />
@@ -98,42 +105,51 @@
       <Item value="override" priority="3" />
       <Item value="_homePresenter" priority="0" />
       <Item value="HomePresenter" priority="0" />
-      <Item value="this" priority="11" />
-      <Item value="value" priority="0" />
-      <Item value="string" priority="3" />
+      <Item value="this" priority="12" />
+      <Item value="value" priority="1" />
+      <Item value="string" priority="7" />
       <Item value="DateTime`0" priority="0" />
       <Item value="NUnit.Framework" priority="1" />
       <Item value="Pet" priority="2" />
-      <Item value="const" priority="3" />
+      <Item value="const" priority="4" />
       <Item value="petName" priority="2" />
-      <Item value="Assert`0" priority="1" />
+      <Item value="Assert`0" priority="2" />
       <Item value="Pet`0" priority="2" />
-      <Item value="sut" priority="0" />
+      <Item value="sut" priority="2" />
       <Item value="View" priority="0" />
-      <Item value="_addPetView" priority="8" />
+      <Item value="_addPetView" priority="16" />
       <Item value="Repository" priority="1" />
       <Item value="_petRepository" priority="3" />
       <Item value="IPetRepository`0" priority="0" />
       <Item value="savePetEvent" priority="0" />
       <Item value="Expect`0" priority="1" />
-      <Item value="int" priority="2" />
+      <Item value="int" priority="4" />
       <Item value="Guid`0" priority="5" />
       <Item value="breed" priority="3" />
-      <Item value="age" priority="3" />
+      <Item value="age" priority="5" />
       <Item value="id" priority="3" />
       <Item value="sut1" priority="0" />
       <Item value="obj" priority="0" />
-      <Item value="return" priority="5" />
-      <Item value="other" priority="3" />
+      <Item value="return" priority="9" />
+      <Item value="other" priority="4" />
       <Item value="_addPetPresenter" priority="0" />
       <Item value="AddPetPresenter" priority="0" />
       <Item value="Gaddzeit.VetAdmin" priority="0" />
-      <Item value="if" priority="1" />
+      <Item value="if" priority="4" />
       <Item value="EventArgs`0" priority="0" />
-      <Item value="txtName" priority="0" />
+      <Item value="txtName" priority="1" />
       <Item value="txtBreed" priority="0" />
-      <Item value="txtAge" priority="0" />
+      <Item value="txtAge" priority="1" />
       <Item value="_newPetId" priority="4" />
+      <Item value="healthHistory" priority="5" />
+      <Item value="pet" priority="1" />
+      <Item value="catch" priority="0" />
+      <Item value="Exception`0" priority="0" />
+      <Item value="bool" priority="0" />
+      <Item value="true" priority="0" />
+      <Item value="isValid" priority="1" />
+      <Item value="false" priority="0" />
+      <Item value="txtValidationMessage" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Rhino.Mocks.MockRepository">
       <Item value="StrictMock`1" priority="1" />
@@ -154,12 +170,14 @@
       <Item value="Raise`1" priority="0" />
       <Item value="GetEventRaiser`0" priority="1" />
       <Item value="Return`0" priority="0" />
+      <Item value="Repeat" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:VetAdmin._Default">
       <Item value="Title" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.String">
       <Item value="Format`0" priority="1" />
+      <Item value="Empty" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.DateTime">
       <Item value="Now" priority="0" />
@@ -168,7 +186,7 @@
       <Item value="ToString`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@NUnit.Framework.Assert">
-      <Item value="AreEqual`0" priority="0" />
+      <Item value="AreEqual`0" priority="1" />
       <Item value="IsAssignableFrom`1" priority="0" />
       <Item value="IsTrue`0" priority="0" />
     </ItemStatistics>
@@ -178,13 +196,17 @@
       <Item value="Age" priority="3" />
       <Item value="Id" priority="3" />
       <Item value="Equals`0" priority="0" />
+      <Item value="HealthHistory" priority="4" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Gaddzeit.VetAdmin.View.IAddPetView">
       <Item value="SavePet" priority="1" />
-      <Item value="Name" priority="0" />
-      <Item value="Breed" priority="0" />
-      <Item value="Age" priority="0" />
+      <Item value="Name" priority="1" />
+      <Item value="Breed" priority="1" />
+      <Item value="Age" priority="1" />
       <Item value="Id" priority="0" />
+      <Item value="HealthHistory" priority="0" />
+      <Item value="ValidationMessage" priority="1" />
+      <Item value="Message" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@Rhino.Mocks.Expect">
       <Item value="Call`0" priority="1" />
@@ -197,9 +219,11 @@
       <Item value="Empty" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.String">
-      <Item value="Equals`0" priority="1" />
+      <Item value="Equals`0" priority="2" />
       <Item value="GetEnumerator`0" priority="0" />
       <Item value="GetHashCode`0" priority="0" />
+      <Item value="LastIndexOf`0" priority="0" />
+      <Item value="Length" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Int32">
       <Item value="Equals`0" priority="0" />
@@ -216,10 +240,14 @@
       <Item value="Empty" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.UI.WebControls.TextBox">
-      <Item value="Text" priority="2" />
+      <Item value="Text" priority="5" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Int32">
       <Item value="Parse`0" priority="0" />
+      <Item value="TryParse`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Rhino.Mocks.Interfaces.IRepeat`1">
+      <Item value="AtLeastOnce`0" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

@@ -13,3 +13,5 @@ C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debu
 C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\Gaddzeit.VetAdmin.Domain.pdb
 C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\Gaddzeit.VetAdmin.Repository.dll
 C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\Gaddzeit.VetAdmin.Repository.pdb
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\VetAdminMvc.dll
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\VetAdminMvc.pdb

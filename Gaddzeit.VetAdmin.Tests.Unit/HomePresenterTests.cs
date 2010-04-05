@@ -47,8 +47,8 @@ namespace Gaddzeit.VetAdmin.Tests.Unit
         {
             _homeView.Initialize += null;
             var initializeEvent = LastCall.IgnoreArguments().GetEventRaiser();
-            _homeView.PageTitle = string.Format("Logged in at {0}", DateTime.Now.ToString());
-
+            _homeView.PageTitle = string.Format("Welcome to M-V-P site. Logged in at {0}", DateTime.Now.ToString()); 
+            
             _mockRepository.ReplayAll();
 
             var sut = new HomePresenter(_homeView);

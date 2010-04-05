@@ -16,7 +16,7 @@ namespace Gaddzeit.VetAdmin.Presenter
 
         public void HomeViewInitialize(object sender, System.EventArgs e)
         {
-            _homeView.PageTitle = string.Format("Logged in at {0}", DateTime.Now.ToString());
+            _homeView.PageTitle = string.Format("Welcome to M-V-P site. Logged in at {0}", DateTime.Now.ToString());
         }
     }
 }

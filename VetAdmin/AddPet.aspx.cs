@@ -40,7 +40,13 @@ namespace VetAdmin
 
         public int Age
         {
-            get { return int.Parse(txtAge.Text); }
+            get
+            {
+
+                var age = 0;
+                int.TryParse(txtAge.Text, out age);
+                return age;
+            }
         }
 
         public Guid Id
@@ -53,6 +59,17 @@ namespace VetAdmin
                 }
                 return _newPetId;
             }
+        }
+
+        public string HealthHistory
+        {
+            get { return txtHealthHistory.Text; }
+        }
+
+        public string Message
+        {
+            get { return lblMessage.Text; }
+            set { lblMessage.Text = value; }
         }
     }
 }

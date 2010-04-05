@@ -16,7 +16,7 @@
     Vet Admin   <a href="http://codingsolutions.blogspot.com/2010/01/linking-tdd-kata-to-creating-user.html">(user stories for app)</a>
     </div>
     <div class="leftNavBar">
-    <a href="">Add Pet</a>
+    <a href="PetManagement/AddPet">Add Pet</a>
     </div>
     <div class="main">
     &nbsp;<br/>

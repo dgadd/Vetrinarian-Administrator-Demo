@@ -5,4 +5,5 @@
   <Module PersistentId="7BF025D3-8A45-4E4C-8F60-27A7D6F2C90F" ModuleId="VetAdmin" />
   <Module PersistentId="8FFB410B-C23E-44C5-A470-FA87EE423B4C" ModuleId="Gaddzeit.VetAdmin.Domain" />
   <Module PersistentId="6358F822-C39C-4007-AAFC-BFBF876F60E7" ModuleId="Gaddzeit.VetAdmin.Repository" />
+  <Module PersistentId="0374D8EC-BC49-441D-96F5-F08CFE7107B2" ModuleId="VetAdminMvc" />
 </Modules>
