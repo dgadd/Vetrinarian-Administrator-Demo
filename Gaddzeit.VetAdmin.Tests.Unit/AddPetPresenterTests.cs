@@ -60,10 +60,9 @@ namespace Gaddzeit.VetAdmin.Tests.Unit
             Expect.Call(_addPetView.Name).Return(petName).Repeat.AtLeastOnce();
             Expect.Call(_addPetView.Breed).Return(breed).Repeat.AtLeastOnce();
             Expect.Call(_addPetView.Age).Return(age).Repeat.AtLeastOnce();
-            Expect.Call(_addPetView.Id).Return(id).Repeat.AtLeastOnce();
             Expect.Call(_addPetView.HealthHistory).Return(healthHistory).Repeat.AtLeastOnce();
             _addPetView.Message = "";
-            var pet = new Pet(petName, breed, age, id);
+            var pet = new Pet(petName, breed, age);
             pet.HealthHistory = healthHistory;
             _petRepository.SavePet(pet);
             _addPetView.Message = "Saved. (No page redirect yet.)";

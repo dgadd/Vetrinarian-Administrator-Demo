@@ -12,11 +12,11 @@
     Demonstration site for ASP.NET MVC
     </div>
     <div class="lightYellowHeader">
-    &nbsp;<img alt="petCat" src="Content/Pics/petCat.jpg" />
+    &nbsp;<img alt="petCat" src="~/Content/Pics/petCat.jpg" runat="server" />
     Vet Admin   <a href="http://codingsolutions.blogspot.com/2010/01/linking-tdd-kata-to-creating-user.html">(user stories for app)</a>
     </div>
     <div class="leftNavBar">
-    <a href="PetManagement/AddPet">Add Pet</a>
+    <a href="<%=Url.Content("~/PetManagement/AddPet")%>">Add Pet</a>
     </div>
     <div class="main">
     &nbsp;<br/>

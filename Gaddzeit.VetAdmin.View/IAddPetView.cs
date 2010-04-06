@@ -8,7 +8,6 @@ namespace Gaddzeit.VetAdmin.View
         string Name { get; }
         string Breed { get; }
         int Age { get; }
-        Guid Id { get; }
         string HealthHistory { get; }
         string Message { set; get; }
     }

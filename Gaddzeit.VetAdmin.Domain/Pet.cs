@@ -1,8 +1,10 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Text.RegularExpressions;
 
 namespace Gaddzeit.VetAdmin.Domain
 {
-    public class Pet
+    public class Pet : IDataErrorInfo
     {
         private readonly string _petName;
         private readonly string _breed;
@@ -43,6 +45,25 @@ namespace Gaddzeit.VetAdmin.Domain
         public override int GetHashCode()
         {
             return this.PetName.GetHashCode() + this.Breed.GetHashCode() + this.Age.GetHashCode();
+        }
+
+        public string this[string propName]
+        {
+            get
+            {
+                if ((propName == "petName") && string.IsNullOrEmpty(_petName))
+                    return "Please enter the pet's name.";
+                if ((propName == "breed") && string.IsNullOrEmpty(_breed))
+                    return "Please enter the pet's breed.";
+                if ((propName == "age") && _age == 0)
+                    return "Please enter the pet's age.";
+                return null;
+            }
+        }
+
+        public string Error
+        {
+            get { return null; }
         }
     }
 }

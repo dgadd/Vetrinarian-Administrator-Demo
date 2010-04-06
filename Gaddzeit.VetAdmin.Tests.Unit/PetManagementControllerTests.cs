@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Web.Mvc;
+using Gaddzeit.VetAdmin.Domain;
 using Gaddzeit.VetAdmin.Repository;
 using NUnit.Framework;
 using Rhino.Mocks;
 using VetAdminMvc.Controllers;
+using VetAdminMvc.Models;
 
 namespace Gaddzeit.VetAdmin.Tests.Unit
 {
@@ -33,14 +35,31 @@ namespace Gaddzeit.VetAdmin.Tests.Unit
         [Test]
         public void AddPetMethod_PetInstanceInput_RedirectsToRouteResult()
         {
-
-
             _mockRepository.ReplayAll();
 
             var sut = new PetManagementController(_petRepository);
             var viewResult = (ViewResult)sut.AddPet();
 
             Assert.AreEqual("Please enter details for this pet.", viewResult.ViewData["Message"]);
+        }
+
+        [Test]
+        public void SavePetMethod_FormFieldsInput_SavesToRepository()
+        {
+            var apfr = new AddPetFormResponse
+                                          {Name = "Fido", Breed = "pug", Age = 3, HealthHistory = "breathing problems"};
+            var id = Guid.NewGuid();
+
+            var pet = new Pet(apfr.Name, apfr.Breed, apfr.Age.Value) { HealthHistory = apfr.HealthHistory };
+
+            _petRepository.SavePet(pet);
+            
+            _mockRepository.ReplayAll();
+
+            var sut = new PetManagementController(_petRepository);
+            var viewResult = (ViewResult) sut.SavePet(apfr);
+
+            Assert.AreEqual("Pet details have been saved.", viewResult.ViewData["message"]);
         }
     }
 }

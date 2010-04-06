@@ -11,3 +11,11 @@ C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\Gaddzeit.VetAdmin.Rep
 C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\Gaddzeit.VetAdmin.Domain.dll
 C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\Gaddzeit.VetAdmin.Repository.pdb
 C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\Gaddzeit.VetAdmin.Domain.pdb
+C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\Castle.Core.dll
+C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\Castle.MicroKernel.dll
+C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\Castle.Windsor.dll
+C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\Castle.DynamicProxy2.dll
+C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\Castle.DynamicProxy2.xml
+C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\Castle.MicroKernel.xml
+C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\Castle.Windsor.xml
+C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\Castle.Core.xml

@@ -8,6 +8,7 @@ namespace Gaddzeit.VetAdmin.Repository
         public void SavePet(Pet pet)
         {
             // call to db or other persitance storage goes here
+            throw new NotImplementedException("Next up: Add ORM to save data to database.");
         }
     }
 }

@@ -15,3 +15,11 @@ C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debu
 C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\Gaddzeit.VetAdmin.Repository.pdb
 C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\VetAdminMvc.dll
 C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\VetAdminMvc.pdb
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\Castle.DynamicProxy2.dll
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\Castle.MicroKernel.dll
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\Castle.Windsor.dll
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\Castle.Core.dll
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\Castle.DynamicProxy2.xml
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\Castle.MicroKernel.xml
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\Castle.Windsor.xml
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\Castle.Core.xml

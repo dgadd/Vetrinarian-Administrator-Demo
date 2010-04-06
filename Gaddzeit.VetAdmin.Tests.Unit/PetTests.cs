@@ -16,12 +16,10 @@ namespace Gaddzeit.VetAdmin.Tests.Unit
             const string petName = "Fido";
             const string breed = "pug";
             const int age = 8;
-            var id = Guid.NewGuid();
-            var sut = new Pet(petName, breed, age, id);
+            var sut = new Pet(petName, breed, age);
             Assert.AreEqual(petName, sut.PetName);
             Assert.AreEqual(breed, sut.Breed);
             Assert.AreEqual(age, sut.Age);
-            Assert.AreEqual(id, sut.Id);
         }
 
         [Test]
@@ -30,9 +28,8 @@ namespace Gaddzeit.VetAdmin.Tests.Unit
             const string petName = "Fido";
             const string breed = "pug";
             const int age = 8;
-            var id = Guid.NewGuid();
-            var sut1 = new Pet(petName, breed, age, id);
-            var sut2 = new Pet(petName, breed, age, id);
+            var sut1 = new Pet(petName, breed, age);
+            var sut2 = new Pet(petName, breed, age);
             Assert.IsTrue(sut1.Equals(sut2));
         }
 
@@ -43,7 +40,7 @@ namespace Gaddzeit.VetAdmin.Tests.Unit
             const string breed = "pug";
             const int age = 8;
             var id = Guid.NewGuid();
-            var sut = new Pet(petName, breed, age, id);
+            var sut = new Pet(petName, breed, age);
             const string healthHistory = "Has had cysts removed on 3 occasions, risk of diabetes.";
             sut.HealthHistory = healthHistory;
             Assert.AreEqual(healthHistory, sut.HealthHistory);
