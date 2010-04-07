@@ -44,11 +44,24 @@ namespace Gaddzeit.VetAdmin.Tests.Unit
         }
 
         [Test]
+        public void SavePetMethod_AddPetFormReponseInputsAreInvalid_ReturnsIDataErrorInfo()
+        {
+            var apfr = new AddPetFormResponse { Name = "", Breed = "", Age = 0, HealthHistory = "breathing problems" };
+
+            var nameCheck = apfr["Name"];
+            var breekCheck = apfr["Breed"];
+            var ageCheck = apfr["Age"];
+
+            const string expectedErrorMessage = "Please enter the pet's name.Please enter the pet's breed.Please enter the pet's age.";
+
+            Assert.AreEqual(expectedErrorMessage, apfr.Error);
+        }
+
+        [Test]
         public void SavePetMethod_AddPetFormReponseInputsAreValid_SavesToRepository()
         {
             var apfr = new AddPetFormResponse
                                           {Name = "Fido", Breed = "pug", Age = 3, HealthHistory = "breathing problems"};
-            var id = Guid.NewGuid();
 
             var pet = new Pet(apfr.Name, apfr.Breed, apfr.Age.Value) { HealthHistory = apfr.HealthHistory };
 

@@ -28,9 +28,9 @@ namespace VetAdminMvc.Models
             {
                 if ((columnName == "Name") && string.IsNullOrEmpty(this.Name))
                     _errorMessage += "Please enter the pet's name.";
-                if ((columnName == "Breed") && string.IsNullOrEmpty(this.Breed))
+                else if ((columnName == "Breed") && string.IsNullOrEmpty(this.Breed))
                     _errorMessage += "Please enter the pet's breed.";
-                if ((columnName == "Age") && !this.Age.HasValue || this.Age == 0)
+                else if ((columnName == "Age") && !this.Age.HasValue || this.Age == 0)
                     _errorMessage += "Please enter the pet's age.";
                 return null;
             }
