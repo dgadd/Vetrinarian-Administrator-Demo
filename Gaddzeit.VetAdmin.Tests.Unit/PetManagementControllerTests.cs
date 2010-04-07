@@ -44,7 +44,7 @@ namespace Gaddzeit.VetAdmin.Tests.Unit
         }
 
         [Test]
-        public void SavePetMethod_FormFieldsInput_SavesToRepository()
+        public void SavePetMethod_AddPetFormReponseInputsAreValid_SavesToRepository()
         {
             var apfr = new AddPetFormResponse
                                           {Name = "Fido", Breed = "pug", Age = 3, HealthHistory = "breathing problems"};
