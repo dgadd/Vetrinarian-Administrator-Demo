@@ -33,7 +33,7 @@ namespace Gaddzeit.VetAdmin.Tests.Unit
         }
 
         [Test]
-        public void AddPetMethod_PetInstanceInput_RedirectsToRouteResult()
+        public void AddPetMethod_NoInput_ReturnsInstructionalMessage()
         {
             _mockRepository.ReplayAll();
 
