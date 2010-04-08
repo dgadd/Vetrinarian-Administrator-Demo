@@ -33,6 +33,37 @@ namespace Gaddzeit.VetAdmin.Tests.Unit
         }
 
         [Test]
+        public void FindAllMethod_PageInput_ReturnsPageOfRowResults()
+        {
+            var petsList = new List<Pet> { 
+                                            new Pet("Fido", "golden retriever", 3),
+                                            new Pet("Ira", "pug", 8),
+                                            new Pet("Clarence", "beagle mix", 10),
+                                            new Pet("Sandy", "mixed", 12),
+                                            new Pet("Melody", "american shorthair", 14),
+                                            new Pet("Skinny", "barn cat", 4),
+                                            new Pet("Jenny", "blue heeler", 5),
+                                            new Pet("Roger", "calico", 12)
+            };
+            Expect.Call(_petRepository.FindAll()).Return(petsList.AsQueryable()).Repeat.AtLeastOnce();
+
+            _mockRepository.ReplayAll();
+
+            const int howManyRowsPerPage = 3;
+            const int whichPage = 2;
+
+            var sut = new PetManagementController(_petRepository);
+            var viewResult = (ViewResult) sut.FindAll(howManyRowsPerPage, whichPage);
+
+            var petsSubset = _petRepository.FindAll()
+               .Skip((whichPage - 1) * howManyRowsPerPage)
+               .Take(howManyRowsPerPage)
+               .ToList();
+
+            Assert.AreEqual(petsSubset, (List<Pet>)viewResult.ViewData.Model);
+        }
+
+        [Test]
         public void AddPetMethod_NoInput_ReturnsInstructionalMessage()
         {
             _mockRepository.ReplayAll();

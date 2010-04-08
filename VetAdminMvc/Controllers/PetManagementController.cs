@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
 using Gaddzeit.VetAdmin.Domain;
 using Gaddzeit.VetAdmin.Repository;
@@ -34,6 +36,16 @@ namespace VetAdminMvc.Controllers
                 ViewData.Add("message", addPetFormResponse.Error);
             }
             return View();            
+        }
+
+        public ViewResult FindAll(int howManyRowsPerPage, int whichPage)
+        {
+            var petsSubset = _petRepository.FindAll()
+                .Skip((whichPage - 1)* howManyRowsPerPage)
+                .Take(howManyRowsPerPage)
+                .ToList();
+
+            return View(petsSubset);
         }
     }
 }

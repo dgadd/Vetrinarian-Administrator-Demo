@@ -1,9 +1,11 @@
-﻿using Gaddzeit.VetAdmin.Domain;
+﻿using System.Linq;
+using Gaddzeit.VetAdmin.Domain;
 
 namespace Gaddzeit.VetAdmin.Repository
 {
     public interface IPetRepository
     {
         void SavePet(Pet pet);
+        IQueryable<Pet> FindAll();
     }
 }
