@@ -1,12 +1,16 @@
-<%@ Page Language="C#" Inherits="System.Web.Mvc.ViewPage<System.Collections.Generic.List<Pet>>" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<List<Gaddzeit.VetAdmin.Domain.Pet>>" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    
-</body>
-</html>
+<asp:Content ID="Content2" ContentPlaceHolderID="Main" Runat="Server">
+<div>
+	<b>User Story #1: Vet admin can enter pet details / sub: find all pets</b>
+	&nbsp;<br />
+	&nbsp;<br />
+	
+	<table class="tableRefined" border="0">
+	    <tr><th class="tdRefined">Name</th><th class="tdRefined">Breed</th><th class="tdRefined">Age</th></tr>
+	<% foreach(var pet in Model) { %>
+	    <tr><td class="tdRefined"><%= pet.PetName %></td><td class="tdRefined"><%= pet.Breed %></td><td class="tdRefined"><%= pet.Age %></td></tr>
+    <% } %>
+    </table>
+</div>   
+</asp:Content>

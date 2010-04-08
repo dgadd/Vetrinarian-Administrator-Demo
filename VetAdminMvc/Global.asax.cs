@@ -22,6 +22,11 @@ namespace VetAdminMvc
                 new { controller = "Home", action = "Index", id = "" }  // Parameter defaults
             );
 
+            routes.MapRoute(
+                    null,   // Don't bother giving this route entry a name
+                    "{controller}/{action}/{howManyRowsPerPage}/{whichPage}", 
+                    new { controller = "PetManagement", action = "FindAll", howManyRowsPerPage = 5, whichPage = 1 } // Defaults
+            );
         }
 
         protected void Application_Start()

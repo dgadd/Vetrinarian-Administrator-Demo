@@ -44,3 +44,25 @@
 				height:600px;
 
 }
+.tableRefined {
+				margin:5px;
+				background-color:black;
+				color:white;
+				font-family: Verdana;
+				font-size:x-small;
+				border-width: 1px 1px 1px 1px;
+				border-color:black;
+				border-style:solid;
+				width:400px;
+}
+.tdRefined
+{
+	color:black;
+    border-width: 1px 1px 1px 1px;
+    padding: 10px;
+    background-color: #FFC;
+    text-align:left;
+    vertical-align:top;
+}
+
+
