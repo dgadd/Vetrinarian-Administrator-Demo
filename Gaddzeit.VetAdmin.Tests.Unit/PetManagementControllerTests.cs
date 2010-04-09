@@ -51,14 +51,13 @@ namespace Gaddzeit.VetAdmin.Tests.Unit
 
             const int howManyRowsPerPage = 3;
             const int whichPage = 2;
+            var petsSubset = _petRepository.FindAll()
+                .Skip((whichPage - 1) * howManyRowsPerPage)
+                .Take(howManyRowsPerPage)
+                .ToList();
 
             var sut = new PetManagementController(_petRepository);
             var viewResult = (ViewResult) sut.FindAll(howManyRowsPerPage, whichPage);
-
-            var petsSubset = _petRepository.FindAll()
-               .Skip((whichPage - 1) * howManyRowsPerPage)
-               .Take(howManyRowsPerPage)
-               .ToList();
 
             Assert.AreEqual(petsSubset, (List<Pet>)viewResult.ViewData.Model);
         }
