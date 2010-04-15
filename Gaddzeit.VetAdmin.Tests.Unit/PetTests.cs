@@ -11,39 +11,46 @@ namespace Gaddzeit.VetAdmin.Tests.Unit
     public class PetTests
     {
         [Test]
-        public void Constructor_NameBreedAgeAndIdInput_MatchesProperties()
+        public void Constructor_NoInput_IsInstanceOfDomainEntity()
         {
-            const string petName = "Fido";
-            const string breed = "pug";
-            const int age = 8;
-            var sut = new Pet(petName, breed, age);
-            Assert.AreEqual(petName, sut.PetName);
-            Assert.AreEqual(breed, sut.Breed);
-            Assert.AreEqual(age, sut.Age);
+            var sut = new Pet();
+            Assert.IsInstanceOf(typeof(DomainEntity), sut);
         }
 
         [Test]
-        public void ConstructorForTwoInstances_SameInputs_AreEqual()
+        public void TwoInstances_SetSameId_AreEqual()
         {
-            const string petName = "Fido";
-            const string breed = "pug";
-            const int age = 8;
-            var sut1 = new Pet(petName, breed, age);
-            var sut2 = new Pet(petName, breed, age);
+            const int idValue = 3527;
+            var sut1 = new Pet();
+            var sut2 = new Pet();
+            sut1.Id = idValue;
+            sut2.Id = idValue;
             Assert.IsTrue(sut1.Equals(sut2));
         }
 
         [Test]
-        public void HealthHistoryProperty_Set_GetMatchesInput()
+        public void Constructor_WithObjectInitializers_MatchProperties()
         {
-            const string petName = "Fido";
+            const string name = "Ira";
             const string breed = "pug";
-            const int age = 8;
-            var id = Guid.NewGuid();
-            var sut = new Pet(petName, breed, age);
-            const string healthHistory = "Has had cysts removed on 3 occasions, risk of diabetes.";
-            sut.HealthHistory = healthHistory;
-            Assert.AreEqual(healthHistory, sut.HealthHistory);
+            const int age = 3;
+            const string temperament = "gentle";
+            const string healthHistory = "breathing issues";
+
+            var sut = new Pet
+                          {
+                              Name = name,
+                              Breed = breed,
+                              Age = age,
+                              Temperament = temperament,
+                              HealthHistory = healthHistory
+                          };
+
+            Assert.AreEqual(name, sut.Name);
+            Assert.AreEqual(breed, sut.Breed );
+            Assert.AreEqual(age, sut.Age);
+            Assert.AreEqual(temperament, sut.Temperament);
+            Assert.AreEqual(healthHistory, sut.HealthHistory);            
         }
     }
 }

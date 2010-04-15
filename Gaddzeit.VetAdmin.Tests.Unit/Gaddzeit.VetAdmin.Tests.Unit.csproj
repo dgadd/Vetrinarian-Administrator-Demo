@@ -55,8 +55,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddPetPresenterTests.cs" />
+    <Compile Include="AddressTests.cs" />
+    <Compile Include="CustomSetTests.cs" />
     <Compile Include="HomeControllerTests.cs" />
     <Compile Include="HomePresenterTests.cs" />
+    <Compile Include="OwnerTests.cs" />
     <Compile Include="PetManagementControllerTests.cs" />
     <Compile Include="PetTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

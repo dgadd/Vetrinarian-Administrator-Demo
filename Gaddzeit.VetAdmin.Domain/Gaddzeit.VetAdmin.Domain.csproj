@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Address.cs" />
+    <Compile Include="CustomSet.cs" />
+    <Compile Include="DirectAddToSetDisallowedException.cs" />
+    <Compile Include="DirectRemoveFromSetDisallowedException.cs" />
+    <Compile Include="DomainEntity.cs" />
+    <Compile Include="Owner.cs" />
     <Compile Include="Pet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -36,15 +36,15 @@ namespace Gaddzeit.VetAdmin.Tests.Unit
         public void FindAllMethod_PageInput_ReturnsPageOfRowResults()
         {
             var petsList = new List<Pet> { 
-                                            new Pet("Fido", "golden retriever", 3),
-                                            new Pet("Ira", "pug", 8),
-                                            new Pet("Clarence", "beagle mix", 10),
-                                            new Pet("Sandy", "mixed", 12),
-                                            new Pet("Melody", "american shorthair", 14),
-                                            new Pet("Skinny", "barn cat", 4),
-                                            new Pet("Jenny", "blue heeler", 5),
-                                            new Pet("Roger", "calico", 12)
-            };
+                                            new Pet { Name = "Fido", Breed = "beagle", Age = 3, Temperament = "gentle" },
+                                            new Pet { Name = "Ira", Breed = "pug", Age = 5, Temperament = "gentle" },
+                                            new Pet { Name = "Clarence", Breed = "beagle mix", Age = 2, Temperament = "gentle" },
+                                            new Pet { Name = "Sandy", Breed = "mixed", Age = 9, Temperament = "gentle" },
+                                            new Pet { Name = "Melody", Breed = "american shorthair", Age = 4, Temperament = "gentle" },
+                                            new Pet { Name = "Skinny", Breed = "barn cat", Age = 10, Temperament = "gentle" },
+                                            new Pet { Name = "Jenny", Breed = "blue heeler", Age = 2, Temperament = "gentle" },
+                                            new Pet { Name = "Roger", Breed = "calico", Age = 14, Temperament = "gentle" },
+            };  
             Expect.Call(_petRepository.FindAll()).Return(petsList.AsQueryable()).Repeat.AtLeastOnce();
 
             _mockRepository.ReplayAll();
@@ -93,8 +93,13 @@ namespace Gaddzeit.VetAdmin.Tests.Unit
             var apfr = new AddPetFormResponse
                                           {Name = "Fido", Breed = "pug", Age = 3, HealthHistory = "breathing problems"};
 
-            var pet = new Pet(apfr.Name, apfr.Breed, apfr.Age.Value) { HealthHistory = apfr.HealthHistory };
-
+            var pet = new Pet
+            {
+                Name = apfr.Name,
+                Breed = apfr.Breed,
+                Age = apfr.Age.Value,
+                HealthHistory = apfr.HealthHistory
+            };
             _petRepository.SavePet(pet);
             
             _mockRepository.ReplayAll();

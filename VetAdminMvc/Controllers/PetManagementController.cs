@@ -27,7 +27,13 @@ namespace VetAdminMvc.Controllers
         {
             if (ModelState.IsValid)
             {
-                var pet = new Pet(addPetFormResponse.Name, addPetFormResponse.Breed, addPetFormResponse.Age.Value) {HealthHistory = addPetFormResponse.HealthHistory};
+                var pet = new Pet
+                          {
+                              Name = addPetFormResponse.Name,
+                              Breed = addPetFormResponse.Breed,
+                              Age = addPetFormResponse.Age.Value,
+                              HealthHistory = addPetFormResponse.HealthHistory
+                          };
                 _petRepository.SavePet(pet);
                 ViewData.Add("message", "Pet details have been saved.");
             }
