@@ -1,0 +1,309 @@
+using System;
+using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.Text;
+using Iesi.Collections.Generic;
+using System.Collections.ObjectModel;
+using OldProject.Common;
+using OldProject.ORM.Domain.DomainParams;
+
+namespace OldProject.ORM.Domain
+{
+    public class NnnnTransaction : DomainEntity
+    {
+        #region class-level variables
+        private DateTime _transactionDate;
+        // set by trigger??  private DateTime _transactionCreatedDate;
+        private string _discountTypeCode;
+        private string _paymentMethodCode;
+        private string _creditCardTypeCode;
+        private string _description;
+        private string _chequeNumber;
+        private string _comment;
+        private string _transactionOrderNumber;
+        private string _targetKey;
+        private string _sourceKey;
+        private decimal _netAmount;
+        private decimal _grossAmount;
+        private bool _returnedFromBankFlag;
+        private int _bankBatchNumber;
+        private int _interfaceStatus;
+        private decimal _regionNumber;
+
+        private string _modifiedUser;
+
+        private NnnnTransactionType _type;
+        private Nnnn _Nnnn;
+        private Invoice _invoice;
+        private GLBatch _gLBatch;
+        private Lot _lot;
+        private LotRateCode _lotRateCode;
+        private BranchBank _branchBank;
+        private AgreementTerm _agreementTerm;
+        private NnnnTransaction _reversedNnnnTransaction;
+        private NnnnTransaction _reversedBy;
+
+        private ISet<AcctTransChargeDetail> _chargeDetails = new HashedSet<AcctTransChargeDetail>();
+        private ISet<AcctTransTaxDetail> _taxDetails = new HashedSet<AcctTransTaxDetail>();
+        private ISet<AppliedPayment> _chargeAppliedPayments = new HashedSet<AppliedPayment>();
+        private ISet<AppliedPayment> _paymentAppliedPayments = new HashedSet<AppliedPayment>();
+
+        // non-persistent class-level variables
+        private bool? _isTaxIncludedInRateFlagOverride = null;
+        private string _dateRangeComparer;
+        private decimal _preTaxAmountForTesting;
+        private TaxableItem _taxableItem;
+        private TaxManager _taxManager;
+        #endregion
+
+        #region properties mapped to database
+        public virtual DateTime TransactionDate
+        {
+            get { return _transactionDate; }
+            set { _transactionDate = value; }
+        }
+
+        public virtual DomainEnums.DiscountTypesEnum DiscountTypeCode
+        {
+            get 
+            {
+                DomainEnums.DiscountTypesEnum dtCode = DomainEnums.DiscountTypesEnum.NONE;
+                if (_discountTypeCode != null && _discountTypeCode.Length > 0)
+                {
+                    dtCode = (DomainEnums.DiscountTypesEnum)Enum.Parse(typeof(DomainEnums.DiscountTypesEnum), _discountTypeCode);
+                }
+
+                return dtCode;
+            }
+            set { _discountTypeCode = (value != DomainEnums.DiscountTypesEnum.NONE) ? value.ToString() : null; }
+        }
+
+        public virtual DomainEnums.PaymentMethodsEnum PaymentMethodCode
+        {
+            get 
+            {
+                DomainEnums.PaymentMethodsEnum pmCode = DomainEnums.PaymentMethodsEnum.NONE;
+
+                if (_paymentMethodCode != null && _paymentMethodCode.Length > 0)
+                {
+                    pmCode = (DomainEnums.PaymentMethodsEnum)Enum.Parse(typeof(DomainEnums.PaymentMethodsEnum), _paymentMethodCode);
+                }
+
+                return pmCode;
+            }
+            set { _paymentMethodCode = (value != DomainEnums.PaymentMethodsEnum.NONE) ? value.ToString(): null; }
+        }
+
+        public virtual DomainEnums.CreditCardTypesEnum CreditCardTypeCode
+        {
+            get 
+            {
+                DomainEnums.CreditCardTypesEnum cctCode = DomainEnums.CreditCardTypesEnum.NONE;
+
+                if (_creditCardTypeCode != null && _creditCardTypeCode.Length > 0)
+                {
+                    cctCode = (DomainEnums.CreditCardTypesEnum)Enum.Parse(typeof(DomainEnums.CreditCardTypesEnum), _creditCardTypeCode);
+                }
+
+                return cctCode;
+            }
+            set { _creditCardTypeCode = (value != DomainEnums.CreditCardTypesEnum.NONE) ? value.ToString() : null; }
+        }
+
+        public virtual string Description
+        {
+            get 
+            { 
+                return _description; 
+            }
+            set 
+            {
+                string fullDescription = string.Empty;
+                if (_type == null)
+                {
+                    throw new Exception("You must set NnnnTransaction.Type BEFORE you set NnnnTransaction.Description.");
+                }
+
+                if (value != null && value.Length > 0)
+                {
+                    fullDescription = string.Format("{0} - {1}", _type.NnnnTransactionTypeDescription, value);
+                }
+                else
+                {
+                    fullDescription = _type.NnnnTransactionTypeDescription;
+                }
+
+                _description = (fullDescription.Length > 150) ? fullDescription.Substring(0, 150) : fullDescription;
+            }
+        }
+
+        public virtual string ChequeNumber
+        {
+            get { return _chequeNumber; }
+            set { _chequeNumber = value; }
+        }
+
+        public virtual string Comment
+        {
+            get { return _comment; }
+            set { _comment = value; }
+        }
+
+        public virtual string TransactionOrderNumber
+        {
+            get { return _transactionOrderNumber; }
+            set { _transactionOrderNumber = value; }
+        }
+
+        public virtual string TargetKey
+        {
+            get { return _targetKey; }
+            set { _targetKey = value; }
+        }
+
+        public virtual string SourceKey
+        {
+            get { return _sourceKey; }
+            set { _sourceKey = value; }
+        }
+
+        public virtual decimal NetAmount
+        {
+            get { return _netAmount; }
+            set 
+            {
+                if (_type == null)
+                {
+                    throw new Exception("You must set NnnnTransaction.Type BEFORE you set NnnnTransaction.NetAmount.");
+                }
+                switch (_type.ClassCode)
+                {
+                    case DomainEnums.ClassCodesEnum.INTEREST:
+                        // explicit fall-through
+                    case DomainEnums.ClassCodesEnum.CHARGE:
+                        if (value <= 0)
+                        {
+                            throw new Exception(string.Format("For Nnnn transaction type {0}, class code {1}, the amount {2} must be > 0.", _type.NnnnTransactionTypeCompositeKey.NnnnTransactionTypeCode, _type.ClassCode.ToString(), value));
+                        }
+                        break;
+                    case DomainEnums.ClassCodesEnum.PAYMENT:
+                        if (value >= 0)
+                        {
+                            throw new Exception(string.Format("For Nnnn transaction type {0}, class code {1}, the amount {2} must be < 0.", _type.NnnnTransactionTypeCompositeKey.NnnnTransactionTypeCode, _type.ClassCode.ToString(), value));
+                        }
+                        break;
+                }
+                _netAmount = value; 
+            }
+        }
+
+        public virtual decimal GrossAmount
+        {
+            get { return _grossAmount; }
+            set { _grossAmount = value; }
+        }
+
+        public virtual bool ReturnedFromBankFlag
+        {
+            get { return _returnedFromBankFlag; }
+            set { _returnedFromBankFlag = value; }
+        }
+
+        public virtual int BankBatchNumber
+        {
+            get { return _bankBatchNumber; }
+            set { _bankBatchNumber = value; }
+        }
+
+        public virtual int InterfaceStatus
+        {
+            get { return _interfaceStatus; }
+            set { _interfaceStatus = value; }
+        }
+
+        public virtual decimal RegionNumber
+        {
+            get { return _regionNumber; }
+            set { _regionNumber = value; }
+        }
+
+        public virtual string ModifiedUser
+        {
+            get 
+            {
+                if (_modifiedUser == null || _modifiedUser == string.Empty)
+                {
+                    throw new Exception("You must set the NnnnTransaction.ModifiedUser value.");
+                }
+                return _modifiedUser; 
+            }
+            set 
+            {
+                if (value == null || value == string.Empty)
+                {
+                    throw new Exception("You must set the NnnnTransaction.ModifiedUser value.");
+                }
+                _modifiedUser = value; 
+            }
+        }
+
+        public virtual NnnnTransactionType Type
+        {
+            get { return _type; }
+            set { _type = value; }
+        }
+
+        public virtual Nnnn Nnnn
+        {
+            get { return _Nnnn; }
+            set { _Nnnn = value; }
+        }
+
+        public virtual Invoice Invoice
+        {
+            get { return _invoice; }
+            set { _invoice = value; }
+        }
+
+        public virtual GLBatch GLBatch
+        {
+            get { return _gLBatch; }
+            set { _gLBatch = value; }
+        }
+
+        public virtual Lot Lot
+        {
+            get { return _lot; }
+            set { _lot = value; }
+        }
+
+        public virtual LotRateCode LotRateCode
+        {
+            get { return _lotRateCode; }
+            set { _lotRateCode = value; }
+        }
+
+        public virtual BranchBank BranchBank
+        {
+            get { return _branchBank; }
+            set { _branchBank = value; }
+        }
+
+        public virtual AgreementTerm AgreementTerm
+        {
+            get { return _agreementTerm; }
+            set { _agreementTerm = value; }
+        }
+
+        public virtual NnnnTransaction ReversedNnnnTransaction
+        {
+            get { return _reversedNnnnTransaction; }
+            set { _reversedNnnnTransaction = value; }
+        }
+
+        public virtual NnnnTransaction ReversedBy
+        {
+            get { return _reversedBy; }
+            set { _reversedBy = value; }
+        }
+        #endregion

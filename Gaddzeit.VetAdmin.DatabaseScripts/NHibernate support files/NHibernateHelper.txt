@@ -1,0 +1,57 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+using NHibernate;
+using NHibernate.Cfg;
+
+namespace OldProject.ORM.Repository.NHibernateRepositories
+{
+    internal class NHibernateHelper
+    {
+        private static readonly ISessionFactory sessionFactory;
+
+        // 2008Mar05 David Gadd
+        // The ThreadStatic attribute was added to prevent thread conflicts.
+        // However, NHibernate best practise discussion suggests that for a web application
+        // this should not be used, and instead Sessions should be stored in HttpContext.Items.
+        // So, why not here?
+        // Because, this class library is lower level; while it currently serves upwards to a
+        // web service, it could as easily serve upwards to a WinForm app. Therefore, I don`t
+        // think HttpContext applies. I was also led to this conclusion by my attempts to 
+        // reference System.Web and add the HttpContext code here; it was not recognized
+        // at runtime as valid.
+        // For more info:
+        // http://forum.hibernate.org/viewtopic.php?t=984380&sid=c00c9b4765de7cda9874e3afd8610488
+        // and there are lots of other forum topics on this concept.
+        [ThreadStatic]
+        private static ISession _currentSession;
+
+        static NHibernateHelper()
+        {
+            sessionFactory = new Configuration().Configure().BuildSessionFactory();
+        }
+
+        public static ISession GetCurrentSession()
+        {
+            if (_currentSession == null || !_currentSession.IsOpen)
+            {
+                _currentSession = sessionFactory.OpenSession();
+            }
+
+            return _currentSession;
+        }
+
+        public static void CloseSession()
+        {
+            _currentSession.Close();
+        }
+
+        public static void CloseSessionFactory()
+        {
+            if (sessionFactory != null)
+            {
+                sessionFactory.Close();
+            }
+        }
+    }
+}

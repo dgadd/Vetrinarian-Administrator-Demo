@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="OldProject.ORM.Domain" assembly="OldProject.ORM.Domain">
+
+  <class name="NnnnTransaction"
+       table="NnnnTransactions"
+	   lazy="true">
+    
+        <id name="Id" column="NnnnTransactionID" type="long" unsaved-value="0" 
+				access="field.camelcase-underscore">
+      <generator class="identity" />
+    </id>
+
+    <property name="TransactionDate" column="TransactionDate" type="datetime"
+       not-null="true" access="field.camelcase-underscore"/>
+
+    <!-- set by trigger???
+    <property name="TransactionCreatedDate" column="TransactionCreatedDate" type="datetime"
+       not-null="true" access="field.camelcase-underscore"/>
+    -->
+    
+    <property name="DiscountTypeCode" column="DiscountTypeCode" type="string" length="5"
+      not-null="false" access="field.camelcase-underscore"/>
+
+    <property name="PaymentMethodCode" column="PaymentMethodCode" type="string" length="10"
+      not-null="false" access="field.camelcase-underscore"/>
+
+    <property name="CreditCardTypeCode" column="CreditcardTypeCode" type="string" length="4"
+						  not-null="false" access="field.camelcase-underscore"/>
+
+    <property name="Description" column="Description" type="string" length="150"
+      not-null="true" access="field.camelcase-underscore"/>
+
+    <property name="ChequeNumber" column="ChequeNumber" type="string" length="20"
+      not-null="false" access="field.camelcase-underscore"/>
+
+    <property name="Comment" column="Comment" type="string" length="200"
+      not-null="false" access="field.camelcase-underscore"/>
+
+    <property name="TransactionOrderNumber" column="TransactionOrderNumber" type="string" length="40"
+      not-null="false" access="field.camelcase-underscore"/>
+
+    <property name="TargetKey" column="TargetKey" type="string" length="50"
+      not-null="false" access="field.camelcase-underscore"/>
+
+    <property name="SourceKey" column="SourceKey" type="string" length="50"
+      not-null="false" access="field.camelcase-underscore"/>
+
+    <property name="NetAmount" column="NetAmount" type="Decimal(19,4)"
+      not-null="true" access="field.camelcase-underscore"/>
+
+    <property name="GrossAmount" column="GrossAmount" type="Decimal(19,4)"
+      not-null="true" access="field.camelcase-underscore"/>
+
+    <property name="ReturnedFromBankFlag" column="ReturnedFromBankFlag" type="boolean"
+         not-null="true" access="field.camelcase-underscore"/>
+
+    <property name="BankBatchNumber" column="BankBatchNumber" type="int"
+          not-null="false" access="field.camelcase-underscore"/>
+
+    <property name="InterfaceStatus" column="InterfaceStatus" type="int"
+          not-null="true" access="field.camelcase-underscore"/>  
+
+    <property name="RegionNumber" column="RegionNumber" type="Decimal(2,0)"
+      not-null="false" access="field.camelcase-underscore"/>
+
+    <property name="ModifiedUser" column="ModifiedUser" type="string" length="30"
+  not-null="true" access="field.camelcase-underscore"/>
+
+
+    <many-to-one name="Nnnn" class="Nnnn" column="NnnnID" not-null="true"
+     access="field.camelcase-underscore" fetch="select"/>
+
+    <many-to-one name="Invoice" class="Invoice" column="InvoiceID" not-null="false" cascade="save-update" 
+     access="field.camelcase-underscore" fetch="select"/>
+
+    <many-to-one name="GLBatch" class="GLBatch" column="GLBatchID" not-null="true" cascade="save-update"
+     access="field.camelcase-underscore" fetch="select"/>
+
+    <many-to-one name="Lot" class="Lot" column="LotID" not-null="false"
+     access="field.camelcase-underscore" fetch="select"/>
+
+    <many-to-one name="LotRateCode" class="LotRateCode" column="LotRateCodeID" not-null="false"
+     access="field.camelcase-underscore" fetch="select"/>
+
+    <many-to-one name="BranchBank" class="BranchBank" column="BranchBankID" not-null="false"
+     access="field.camelcase-underscore" fetch="select"/>
+
+    <many-to-one name="AgreementTerm" class="AgreementTerm" column="AgreementTermID" not-null="false"
+     access="field.camelcase-underscore" fetch="select"/>
+
+    <many-to-one name="ReversedNnnnTransaction" class="NnnnTransaction" column="ReversedNnnnTransactionID" not-null="false"
+     access="field.camelcase-underscore" fetch="select"/>
+
+    <many-to-one name="ReversedBy" class="NnnnTransaction" column="ReversedByNnnnTransactionID" not-null="false"
+     access="field.camelcase-underscore" fetch="select"/>
+
+    <many-to-one name="Type" class="NnnnTransactionType" fetch="select">
+      <column name="NnnnTransactionTypeCode" length="10" not-null="true" />
+      <column name="LanguageCode" length="3" not-null="true" />
+    </many-to-one>
+    
+
+    <set name="ChargeDetails" lazy="true" access="field.camelcase-underscore"
+    cascade="all" inverse="true">
+      <key column="NnnnTransactionID"/>
+      <one-to-many class="AcctTransChargeDetail"/>
+    </set>
+
+    <set name="TaxDetails" lazy="true" access="field.camelcase-underscore"
+    cascade="all" inverse="true">
+      <key column="NnnnTransactionID"/>
+      <one-to-many class="AcctTransTaxDetail"/>
+    </set>
+
+    <set name="ChargeAppliedPayments" lazy="true" access="field.camelcase-underscore"
+    cascade="all" inverse="true">
+      <key column="ChargeNnnnTransactionID"/>
+      <one-to-many class="AppliedPayment"/>
+    </set>
+
+    <set name="PaymentAppliedPayments" lazy="true" access="field.camelcase-underscore"
+    cascade="all" inverse="true">
+      <key column="PaymentNnnnTransactionID"/>
+      <one-to-many class="AppliedPayment"/>
+    </set>
+
+
+
+  </class>
+
+</hibernate-mapping>

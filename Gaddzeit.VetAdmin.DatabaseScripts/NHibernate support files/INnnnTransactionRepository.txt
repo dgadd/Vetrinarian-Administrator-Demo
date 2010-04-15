@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+using Iesi.Collections.Generic;
+using OldProject.ORM.Domain;
+
+namespace OldProject.ORM.Repository
+{
+    public interface INnnnTransactionRepository
+    {
+        NnnnTransaction SaveNnnnTransaction(NnnnTransaction NnnnTransaction);
+
+        NnnnTransaction UpdateNnnnTransaction(NnnnTransaction NnnnTransaction);
+
+        NnnnTransaction FindByIdWithAssociations(long Id);
+
+        NnnnTransaction FindByIdWithAssociationsRequiredForReverals(long Id);
+
+        NnnnTransaction FindByIdWithAssociationsRequiredForAppliedPaymentReverals(long Id);
+
+        NnnnTransaction FindByIdWithAppliedPayments(long Id);
+
+        NnnnTransaction FindByIdWithAppliedPaymentsAndRelatedTransactions(long Id);
+
+        ISet<NnnnTransaction> FindCurrentMonthInterestChargesByNnnn(long NnnnId);
+
+        ISet<NnnnTransaction> FindAdjustedChargesWithPositiveAppliedAmounts();
+    }
+}

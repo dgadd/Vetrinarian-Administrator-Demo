@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gaddzeit.VetAdmin.Repositor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetAdminMvc", "VetAdminMvc\VetAdminMvc.csproj", "{0374D8EC-BC49-441D-96F5-F08CFE7107B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gaddzeit.VetAdmin.DatabaseScripts", "Gaddzeit.VetAdmin.DatabaseScripts\Gaddzeit.VetAdmin.DatabaseScripts.csproj", "{8F4242E0-0A4F-44C0-A59B-523BFA5B7FBB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aa.Various.Support.Files", "Gaddzeit.VetAdmin.DatabaseScripts\aa.Various.Support.Files.csproj", "{8F4242E0-0A4F-44C0-A59B-523BFA5B7FBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,366 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+using Iesi.Collections.Generic;
+using OldProject.ORM.Domain;
+using OldProject.Common;
+using NHibernate;
+
+namespace OldProject.ORM.Repository.NHibernateRepositories
+{
+    internal class NnnnTransactionRepositoryNHibernate : INnnnTransactionRepository
+    {
+        public NnnnTransaction SaveNnnnTransaction(NnnnTransaction NnnnTransaction)
+        {
+            try
+            {
+                ISession session = NHibernateHelper.GetCurrentSession();
+
+                ITransaction tx = session.BeginTransaction();
+
+                session.Save(NnnnTransaction);
+                tx.Commit();
+            }
+            catch (HibernateException hEx)
+            {
+                ExceptionManager.CreateExceptionOrLogEntry(this, ExceptionManager.Action.RethrowWithinTheCallStack_DeferLog, ((hEx.InnerException != null) ? hEx.InnerException.Message : string.Empty) + "\r\n" + hEx.Message);
+            }
+            catch (Exception ex)
+            {
+                ExceptionManager.CreateExceptionOrLogEntry(this, ExceptionManager.Action.RethrowWithinTheCallStack_DeferLog, ex.Message);
+            }
+            finally
+            {
+                NHibernateHelper.CloseSession();
+            }
+
+            return NnnnTransaction;
+        }
+
+        public NnnnTransaction UpdateNnnnTransaction(NnnnTransaction NnnnTransaction)
+        {
+            try
+            {
+                ISession session = NHibernateHelper.GetCurrentSession();
+
+                ITransaction tx = session.BeginTransaction();
+
+                session.Update(NnnnTransaction);
+                tx.Commit();
+            }
+            catch (HibernateException hEx)
+            {
+                ExceptionManager.CreateExceptionOrLogEntry(this, ExceptionManager.Action.RethrowWithinTheCallStack_DeferLog, ((hEx.InnerException != null) ? hEx.InnerException.Message : string.Empty) + "\r\n" + hEx.Message);
+            }
+            catch (Exception ex)
+            {
+                ExceptionManager.CreateExceptionOrLogEntry(this, ExceptionManager.Action.RethrowWithinTheCallStack_DeferLog, ex.Message);
+            }
+            finally
+            {
+                NHibernateHelper.CloseSession();
+            }
+
+            return NnnnTransaction;
+        }
+
+        public NnnnTransaction FindByIdWithAppliedPayments(long Id)
+        {
+            string hqlQuery = "from NnnnTransaction actr "
+                + "left join fetch actr.Type typ "
+                + "left join fetch actr.ChargeAppliedPayments chgapl "
+                + "left join fetch actr.PaymentAppliedPayments payapl "
+                + "where actr.Id = :Id";
+
+            NnnnTransaction NnnnTransaction = null;
+
+            try
+            {
+                ISession session = NHibernateHelper.GetCurrentSession();
+
+                NnnnTransaction = (NnnnTransaction)session.CreateQuery(hqlQuery)
+                            .SetInt64("Id", Id)
+                            .UniqueResult<NnnnTransaction>();
+            }
+            catch (HibernateException hEx)
+            {
+                ExceptionManager.CreateExceptionOrLogEntry(this, ExceptionManager.Action.RethrowWithinTheCallStack_DeferLog, ((hEx.InnerException != null) ? hEx.InnerException.Message : string.Empty) + "\r\n" + hEx.Message);
+            }
+            catch (Exception ex)
+            {
+                ExceptionManager.CreateExceptionOrLogEntry(this, ExceptionManager.Action.RethrowWithinTheCallStack_DeferLog, ex.Message);
+            }
+            finally
+            {
+                NHibernateHelper.CloseSession();
+            }
+
+            return NnnnTransaction;
+        }
+
+        public NnnnTransaction FindByIdWithAppliedPaymentsAndRelatedTransactions(long Id)
+        {
+            string hqlQuery = "from NnnnTransaction actr "
+                + "left join fetch actr.Type typ "
+                + "left join fetch actr.ChargeAppliedPayments chgapl "
+                + "left join fetch actr.PaymentAppliedPayments payapl "
+                + "left join fetch chgapl.PaymentNnnnTransaction chgapl_pat "
+                + "left join fetch chgapl_pat.PaymentAppliedPayments cppap "
+                + "left join fetch payapl.ChargeNnnnTransaction payapl_cat "
+                + "left join fetch payapl_cat.ChargeAppliedPayments pccap "
+                + "where actr.Id = :Id";
+
+            NnnnTransaction NnnnTransaction = null;
+
+            try
+            {
+                ISession session = NHibernateHelper.GetCurrentSession();
+
+                NnnnTransaction = (NnnnTransaction)session.CreateQuery(hqlQuery)
+                            .SetInt64("Id", Id)
+                            .UniqueResult<NnnnTransaction>();
+            }
+            catch (HibernateException hEx)
+            {
+                ExceptionManager.CreateExceptionOrLogEntry(this, ExceptionManager.Action.RethrowWithinTheCallStack_DeferLog, ((hEx.InnerException != null) ? hEx.InnerException.Message : string.Empty) + "\r\n" + hEx.Message);
+            }
+            catch (Exception ex)
+            {
+                ExceptionManager.CreateExceptionOrLogEntry(this, ExceptionManager.Action.RethrowWithinTheCallStack_DeferLog, ex.Message);
+            }
+            finally
+            {
+                NHibernateHelper.CloseSession();
+            }
+
+            return NnnnTransaction;
+        }
+
+        public NnnnTransaction FindByIdWithAssociations(long Id)
+        {
+            string hqlQuery = "from NnnnTransaction actr "
+                + "left join fetch actr.Type typ "
+                + "left join fetch actr.Nnnn acct "
+                + "left join fetch actr.Invoice inv "
+                + "left join fetch actr.GLBatch glb "
+                + "left join fetch actr.Lot lot "
+                + "left join fetch actr.LotRateCode lrc "
+                + "left join fetch actr.BranchBank bbk "
+                + "left join fetch actr.AgreementTerm agtr "
+                + "left join fetch actr.ReversedNnnnTransaction rvactr "
+                + "left join fetch actr.ReversedBy rvbyactr "
+                + "left join fetch actr.ChargeDetails chgdtl "
+                + "left join fetch actr.TaxDetails taxdtl "
+                + "left join fetch actr.ChargeAppliedPayments chgapl "
+                + "left join fetch actr.PaymentAppliedPayments payapl "
+                + "where actr.Id = :Id";
+
+            NnnnTransaction NnnnTransaction = null;
+
+            try
+            {
+                ISession session = NHibernateHelper.GetCurrentSession();
+
+                NnnnTransaction = (NnnnTransaction)session.CreateQuery(hqlQuery)
+                            .SetInt64("Id", Id)
+                            .UniqueResult<NnnnTransaction>();
+            }
+            catch (HibernateException hEx)
+            {
+                ExceptionManager.CreateExceptionOrLogEntry(this, ExceptionManager.Action.RethrowWithinTheCallStack_DeferLog, ((hEx.InnerException != null) ? hEx.InnerException.Message : string.Empty) + "\r\n" + hEx.Message);
+            }
+            catch (Exception ex)
+            {
+                ExceptionManager.CreateExceptionOrLogEntry(this, ExceptionManager.Action.RethrowWithinTheCallStack_DeferLog, ex.Message);
+            }
+            finally
+            {
+                NHibernateHelper.CloseSession();
+            }
+
+            return NnnnTransaction;
+        }
+
+        public NnnnTransaction FindByIdWithAssociationsRequiredForReverals(long Id)
+        {
+            string hqlQuery = "from NnnnTransaction atrn "
+                + "left join fetch atrn.Type typ "
+                + "left join fetch atrn.Nnnn acct "
+                + "left join fetch atrn.Invoice inv "
+                + "left join fetch atrn.GLBatch glb "
+                + "left join fetch atrn.Lot lot "
+                + "left join fetch atrn.LotRateCode lrc "
+                + "left join fetch atrn.BranchBank bbk "
+                + "left join fetch atrn.AgreementTerm agtr "
+                + "left join fetch atrn.ChargeDetails chgdtl "
+                + "left join fetch chgdtl.Assignment "
+                + "left join fetch atrn.TaxDetails txdtl "
+                + "left join fetch txdtl.TaxType "
+                + "left join fetch atrn.ChargeAppliedPayments chapy "
+                + "left join fetch chapy.PaymentNnnnTransaction pat "
+                + "left join fetch pat.PaymentAppliedPayments pat_pap "
+                + "left join fetch pat.Type pat_typ "
+                + "left join fetch atrn.PaymentAppliedPayments pyapy "
+                + "left join fetch pyapy.ChargeNnnnTransaction cat "
+                + "left join fetch cat.ChargeAppliedPayments cat_cap "
+                + "left join fetch cat.Type cat_typ "
+                + "where atrn.Id = :Id";
+
+            NnnnTransaction NnnnTransaction = null;
+
+            try
+            {
+                ISession session = NHibernateHelper.GetCurrentSession();
+
+                NnnnTransaction = (NnnnTransaction)session.CreateQuery(hqlQuery)
+                            .SetInt64("Id", Id)
+                            .UniqueResult<NnnnTransaction>();
+            }
+            catch (HibernateException hEx)
+            {
+                ExceptionManager.CreateExceptionOrLogEntry(this, ExceptionManager.Action.RethrowWithinTheCallStack_DeferLog, ((hEx.InnerException != null) ? hEx.InnerException.Message : string.Empty) + "\r\n" + hEx.Message);
+            }
+            catch (Exception ex)
+            {
+                ExceptionManager.CreateExceptionOrLogEntry(this, ExceptionManager.Action.RethrowWithinTheCallStack_DeferLog, ex.Message);
+            }
+            finally
+            {
+                NHibernateHelper.CloseSession();
+            }
+
+            return NnnnTransaction;
+        }
+
+        public NnnnTransaction FindByIdWithAssociationsRequiredForAppliedPaymentReverals(long Id)
+        {
+            string hqlQuery = "from NnnnTransaction atrn "
+                + "left join fetch atrn.Type typ "
+                + "left join fetch atrn.ChargeAppliedPayments chapy "
+                + "left join fetch chapy.PaymentNnnnTransaction pat "
+                + "left join fetch pat.PaymentAppliedPayments pat_pap "
+                + "left join fetch pat.Type pat_typ "
+                + "left join fetch atrn.PaymentAppliedPayments pyapy "
+                + "left join fetch pyapy.ChargeNnnnTransaction cat "
+                + "left join fetch cat.ChargeAppliedPayments cat_cap "
+                + "left join fetch cat.Type cat_typ "
+                + "where atrn.Id = :Id";
+
+            NnnnTransaction NnnnTransaction = null;
+
+            try
+            {
+                ISession session = NHibernateHelper.GetCurrentSession();
+
+                NnnnTransaction = (NnnnTransaction)session.CreateQuery(hqlQuery)
+                            .SetInt64("Id", Id)
+                            .UniqueResult<NnnnTransaction>();
+            }
+            catch (HibernateException hEx)
+            {
+                ExceptionManager.CreateExceptionOrLogEntry(this, ExceptionManager.Action.RethrowWithinTheCallStack_DeferLog, ((hEx.InnerException != null) ? hEx.InnerException.Message : string.Empty) + "\r\n" + hEx.Message);
+            }
+            catch (Exception ex)
+            {
+                ExceptionManager.CreateExceptionOrLogEntry(this, ExceptionManager.Action.RethrowWithinTheCallStack_DeferLog, ex.Message);
+            }
+            finally
+            {
+                NHibernateHelper.CloseSession();
+            }
+
+            return NnnnTransaction;
+        }       
+
+        public ISet<NnnnTransaction> FindCurrentMonthInterestChargesByNnnn(long NnnnId)
+        {
+            // 2009Jan28 David Gadd
+            // Bug fix ID 1933 - Changed the query to allow MULTIPLE results.
+            // While theoretically there should only ever be one interest charge per month, 
+            // querying for a collection prevents an error occuring if more than one interest
+            // charge per month is found. Better to be able to handle the possibility of multiple interest charges.
+            DateTime firstOfMonth = DateManipulator.GetFirstDateOfCurrentMonth(DateTime.Today);
+            DateTime lastOfMonth = DateManipulator.GetLastDateOfCurrentMonth(DateTime.Today);
+
+            string hqlQuery = "from NnnnTransaction actr "
+                + "left join fetch actr.Type typ "
+                + "left join fetch actr.Nnnn acct "
+                + "where acct.Id = :NnnnId "
+                + "and actr.TransactionDate BETWEEN :firstOfMonth AND :lastOfMonth "
+                + "and typ.NnnnTransactionTypeCompositeKey.NnnnTransactionTypeCode = :typeINT ";   
+
+            ISet<NnnnTransaction> NnnnTransactionsAsSet = null;
+
+            try
+            {
+                ISession session = NHibernateHelper.GetCurrentSession();
+
+                IList<NnnnTransaction> NnnnTransactions = session.CreateQuery(hqlQuery)
+                            .SetInt64("NnnnId", NnnnId)
+                            .SetDateTime("firstOfMonth", firstOfMonth)
+                            .SetDateTime("lastOfMonth", lastOfMonth)
+                            .SetString("typeINT", DomainEnums.NnnnTransactionTypesEnum.INT.ToString())
+                            .List<NnnnTransaction>();
+
+                NnnnTransactionsAsSet = new HashedSet<NnnnTransaction>(NnnnTransactions);
+            }
+            catch (HibernateException hEx)
+            {
+                ExceptionManager.CreateExceptionOrLogEntry(this, ExceptionManager.Action.RethrowWithinTheCallStack_DeferLog, ((hEx.InnerException != null) ? hEx.InnerException.Message : string.Empty) + "\r\n" + hEx.Message);
+            }
+            catch (Exception ex)
+            {
+                ExceptionManager.CreateExceptionOrLogEntry(this, ExceptionManager.Action.RethrowWithinTheCallStack_DeferLog, ex.Message);
+            }
+            finally
+            {
+                NHibernateHelper.CloseSession();
+            }
+
+            return NnnnTransactionsAsSet;
+        }
+
+        public ISet<NnnnTransaction> FindAdjustedChargesWithPositiveAppliedAmounts()
+        {
+            string hqlQuery = "from NnnnTransaction actr "
+                + "left join fetch actr.Type typ "
+                + "left join fetch actr.Nnnn acct "
+                + "left join fetch actr.GLBatch glb "
+                + "left join fetch actr.PaymentAppliedPayments paps "
+                + "left join fetch paps.ChargeNnnnTransaction paps_cat "
+                // now get the reversal and its applied payments to historic credits
+                + "left join fetch actr.ReversedNnnnTransaction rvsat "
+                + "where typ.NnnnTransactionTypeCompositeKey.NnnnTransactionTypeCode = :typeADJCHG "
+                + "and rvsat.Id = paps_cat.Id " 
+                + "and paps.Amount > :zeroValue ";
+
+            ISet<NnnnTransaction> NnnnTransactionsAsSet = null;
+
+            try
+            {
+                ISession session = NHibernateHelper.GetCurrentSession();
+
+                IList<NnnnTransaction> NnnnTransactions = session.CreateQuery(hqlQuery)
+                            .SetDecimal("zeroValue", 0.0M)
+                            .SetString("typeADJCHG", DomainEnums.NnnnTransactionTypesEnum.ADJCHG.ToString())
+                            .List<NnnnTransaction>();
+
+                NnnnTransactionsAsSet = new HashedSet<NnnnTransaction>(NnnnTransactions);
+            }
+            catch (HibernateException hEx)
+            {
+                ExceptionManager.CreateExceptionOrLogEntry(this, ExceptionManager.Action.RethrowWithinTheCallStack_DeferLog, ((hEx.InnerException != null) ? hEx.InnerException.Message : string.Empty) + "\r\n" + hEx.Message);
+            }
+            catch (Exception ex)
+            {
+                ExceptionManager.CreateExceptionOrLogEntry(this, ExceptionManager.Action.RethrowWithinTheCallStack_DeferLog, ex.Message);
+            }
+            finally
+            {
+                NHibernateHelper.CloseSession();
+            }
+
+            return NnnnTransactionsAsSet;
+        }
+    }
+}
