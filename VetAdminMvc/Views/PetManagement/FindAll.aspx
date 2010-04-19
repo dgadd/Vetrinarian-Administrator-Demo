@@ -9,7 +9,7 @@
 	<table class="tableRefined" border="0">
 	    <tr><th class="tdRefined">Name</th><th class="tdRefined">Breed</th><th class="tdRefined">Age</th></tr>
 	<% foreach(var pet in Model) { %>
-	    <tr><td class="tdRefined"><%= pet.PetName %></td><td class="tdRefined"><%= pet.Breed %></td><td class="tdRefined"><%= pet.Age %></td></tr>
+	    <tr><td class="tdRefined"><%= pet.Name %></td><td class="tdRefined"><%= pet.Breed %></td><td class="tdRefined"><%= pet.Age %></td></tr>
     <% } %>
     </table>
 </div>   
