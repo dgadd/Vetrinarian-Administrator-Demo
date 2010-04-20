@@ -9,3 +9,10 @@ C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Presenter\bin\Debug
 C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Presenter\bin\Debug\Gaddzeit.VetAdmin.Repository.pdb
 C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Presenter\bin\Debug\Gaddzeit.VetAdmin.Domain.dll
 C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Presenter\bin\Debug\Gaddzeit.VetAdmin.Domain.pdb
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Presenter\bin\Debug\log4net.dll
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Presenter\bin\Debug\Antlr3.Runtime.dll
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Presenter\bin\Debug\Iesi.Collections.dll
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Presenter\bin\Debug\NHibernate.dll
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Presenter\bin\Debug\log4net.xml
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Presenter\bin\Debug\Iesi.Collections.xml
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Presenter\bin\Debug\NHibernate.xml

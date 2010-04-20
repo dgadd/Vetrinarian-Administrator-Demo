@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-configuration xmlns="urn:nhibernate-configuration-2.2">
+
+  <session-factory>
+
+    <property name="connection.driver_class">NHibernate.Driver.SqlClientDriver</property>
+    <property name="connection.connection_string">
+      Data Source=sql2k803.discountasp.net;Initial Catalog=SQL2008_717150_vetadmin;Persist Security Info=True;User ID=GaddzeitDb;Password=QP35joy46
+    </property>
+    <property name="show_sql">true</property>
+    <property name="dialect">NHibernate.Dialect.MsSql2005Dialect</property>
+    <property name="proxyfactory.factory_class">NHibernate.ByteCode.Castle.ProxyFactoryFactory, NHibernate.ByteCode.Castle</property>
+    <mapping assembly="Gaddzeit.VetAdmin.Domain"/>
+    
+  </session-factory>
+  
+</hibernate-configuration>

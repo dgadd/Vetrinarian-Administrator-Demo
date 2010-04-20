@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{6358F822-C39C-4007-AAFC-BFBF876F60E7}</ProjectGuid>
+    <ProjectGuid>{E1BE1A77-76E8-41FD-89F1-1838B61E0AD3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Gaddzeit.VetAdmin.Repository</RootNamespace>
-    <AssemblyName>Gaddzeit.VetAdmin.Repository</AssemblyName>
+    <RootNamespace>Gaddzeit.VetAdmin.Tests.Integration</RootNamespace>
+    <AssemblyName>Gaddzeit.VetAdmin.Tests.Integration</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -35,6 +35,14 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Library\NHibernate.dll</HintPath>
     </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle, Version=2.1.2.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.5.3.9345, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -49,16 +57,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FakePetRepository.aspx.cs" />
-    <Compile Include="IPetRepository.cs" />
-    <Compile Include="NHibernateRepositories\NHibernateDataProvider.cs" />
-    <Compile Include="NHibernateRepositories\NHibernatePetRepository.cs" />
+    <Compile Include="NHibernateDataProviderTests.cs" />
+    <Compile Include="NHibernatePetRepositoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="hibernate.cfg.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Gaddzeit.VetAdmin.Domain\Gaddzeit.VetAdmin.Domain.csproj">
       <Project>{8FFB410B-C23E-44C5-A470-FA87EE423B4C}</Project>
       <Name>Gaddzeit.VetAdmin.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gaddzeit.VetAdmin.Repository\Gaddzeit.VetAdmin.Repository.csproj">
+      <Project>{6358F822-C39C-4007-AAFC-BFBF876F60E7}</Project>
+      <Name>Gaddzeit.VetAdmin.Repository</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
