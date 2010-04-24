@@ -19,3 +19,10 @@ C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\Castle.DynamicProxy2.
 C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\Castle.MicroKernel.xml
 C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\Castle.Windsor.xml
 C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\Castle.Core.xml
+C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\log4net.dll
+C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\Iesi.Collections.dll
+C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\Antlr3.Runtime.dll
+C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\NHibernate.dll
+C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\log4net.xml
+C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\Iesi.Collections.xml
+C:\SourceCode\Development\VetrinarianAdmin\VetAdminMvc\bin\NHibernate.xml

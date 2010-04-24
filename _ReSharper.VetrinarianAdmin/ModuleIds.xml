@@ -7,4 +7,6 @@
   <Module PersistentId="6358F822-C39C-4007-AAFC-BFBF876F60E7" ModuleId="Gaddzeit.VetAdmin.Repository" />
   <Module PersistentId="0374D8EC-BC49-441D-96F5-F08CFE7107B2" ModuleId="VetAdminMvc" />
   <Module PersistentId="8F4242E0-0A4F-44C0-A59B-523BFA5B7FBB" ModuleId="Gaddzeit.VetAdmin.DatabaseScripts" />
+  <Module PersistentId="E1BE1A77-76E8-41FD-89F1-1838B61E0AD3" ModuleId="Gaddzeit.VetAdmin.Tests.Integration" />
+  <Module PersistentId="B8ACC5F8-66E6-45A4-838F-DBC84C4D0A8F" ModuleId="VetAdminMvc2" />
 </Modules>

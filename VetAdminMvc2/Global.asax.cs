@@ -22,6 +22,12 @@ namespace VetAdminMvc2
                 new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
             );
 
+            routes.MapRoute(
+                null,   // Don't bother giving this route entry a name
+                "{controller}/{action}/{howManyRowsPerPage}/{whichPage}",
+                new { controller = "PetManagement", action = "FindAll", howManyRowsPerPage = 5, whichPage = 1 } // Defaults
+            );
+
         }
 
         protected void Application_Start()
@@ -29,6 +35,7 @@ namespace VetAdminMvc2
             AreaRegistration.RegisterAllAreas();
 
             RegisterRoutes(RouteTable.Routes);
+            ControllerBuilder.Current.SetControllerFactory(new WindsorControllerFactory());
         }
     }
 }

@@ -1,0 +1,8 @@
+2010Apr24 David Gadd
+
+This source code demonstrates the in-progress development of a Vetrinary Admin web application demo using proper TDD (design-by-test) with a domain model, repository layer (using NHibernate for persistence) and presentation layer clients for both M-V-P pattern (using traditional ASP.NET) and for ASP.NET MVC (now using version 2).
+
+The source code will continue to be updated on a daily/weekly basis.
+
+The deployed demo web application(s) are located at http://www.gaddzeit.com.
+

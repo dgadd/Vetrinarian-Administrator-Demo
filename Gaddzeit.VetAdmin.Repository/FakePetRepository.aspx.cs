@@ -13,7 +13,7 @@ namespace Gaddzeit.VetAdmin.Repository
             throw new NotImplementedException("Next up: Add ORM to save data to database.");
         }
 
-        public IQueryable<Pet> FindAll()
+        public IList<Pet> FindAll()
         {
             var petsList = new List<Pet> { 
                                             new Pet { Name = "Fido", Breed = "beagle", Age = 3, Temperament = "gentle" },
@@ -26,7 +26,7 @@ namespace Gaddzeit.VetAdmin.Repository
                                             new Pet { Name = "Roger", Breed = "calico", Age = 14, Temperament = "gentle" },
             };                                            
 
-            return petsList.AsQueryable();
+            return petsList;
         }
     }
 }

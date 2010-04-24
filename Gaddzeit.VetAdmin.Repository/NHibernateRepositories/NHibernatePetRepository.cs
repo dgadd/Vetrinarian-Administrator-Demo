@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Gaddzeit.VetAdmin.Domain;
 
@@ -11,7 +12,7 @@ namespace Gaddzeit.VetAdmin.Repository.NHibernateRepositories
             throw new NotImplementedException();
         }
 
-        public IQueryable<Pet> FindAll()
+        public IList<Pet> FindAll()
         {
             throw new NotImplementedException();
         }
