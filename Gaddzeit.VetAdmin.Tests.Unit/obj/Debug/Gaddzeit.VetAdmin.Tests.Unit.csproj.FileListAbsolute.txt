@@ -29,3 +29,10 @@ C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debu
 C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\Castle.Windsor.dll
 C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\Castle.DynamicProxy2.xml
 C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\Castle.Core.xml
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\Rhino.Mocks.dll
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\FluentNHibernate.dll
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\FluentNHibernate.pdb
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\FluentNHibernate.xml
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\NHibernate.ByteCode.Castle.dll
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\NHibernate.ByteCode.Castle.xml
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\System.Data.SQLite.DLL

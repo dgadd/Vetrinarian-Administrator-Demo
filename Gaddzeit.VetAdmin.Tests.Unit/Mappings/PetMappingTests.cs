@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using FluentNHibernate.Mapping;
+using FluentNHibernate.Mapping.Providers;
+using FluentNHibernate.MappingModel.ClassBased;
 using FluentNHibernate.Testing;
 using Gaddzeit.VetAdmin.Domain;
 using Gaddzeit.VetAdmin.Domain.DomainServices;
 using MvcContrib.TestHelper;
 using NBehave.Spec.NUnit;
 using NUnit.Framework;
+using Gaddzeit.VetAdmin.Domain.Mappings;
 
 namespace Gaddzeit.VetAdmin.Tests.Unit.Mappings
 {
@@ -16,7 +20,6 @@ namespace Gaddzeit.VetAdmin.Tests.Unit.Mappings
     {
         private PersistenceSpecification<Pet> _persistenceSpecification;
         private Pet _pet;
-
 
         [SetUp]
         public void SetUp()
@@ -36,7 +39,7 @@ namespace Gaddzeit.VetAdmin.Tests.Unit.Mappings
                 HealthHistory = healthHistory
             };
 
-            var identicalPet = new Pet
+            var samePetPlacedIntoSession = new Pet
             {
                 Name = name,
                 Breed = breed,
@@ -45,45 +48,29 @@ namespace Gaddzeit.VetAdmin.Tests.Unit.Mappings
                 HealthHistory = healthHistory
             };
 
-            var sessionSource = FluentNHibernateMappingTester.GetNHibernateSessionWithWrappedEntity(identicalPet);
+            var sessionSource = FluentNHibernateMappingTester.GetNHibernateSessionWithWrappedEntity(samePetPlacedIntoSession);
             _persistenceSpecification = new PersistenceSpecification<Pet>(sessionSource, new DomainEntityComparer());
         }
 
         [Test]
-        public void IdProperty_Get_MapIsVerified()
+        public void Constructor_NoInputs_IsInstanceOfClassMappingPet()
         {
-
-            _persistenceSpecification.CheckProperty(p => p.Id, _pet.Id).VerifyTheMappings();
+            var sut = new PetMap();
+            sut.ShouldBeInstanceOf<ClassMap<Pet>>();
         }
 
         [Test]
-        public void AgeProperty_Get_MapIsVerified()
+        public void AllProperties_CompareByType_MapIsVerified()
         {
-            _persistenceSpecification.CheckProperty(p => p.Age, _pet.Age).VerifyTheMappings();
+            _persistenceSpecification
+                .CheckProperty(c => c.Id, _pet.Id)
+                .CheckProperty(c => c.Age, _pet.Age)
+                .CheckProperty(c => c.Breed, _pet.Breed)
+                .CheckProperty(c => c.HealthHistory, _pet.HealthHistory)
+                .CheckProperty(c => c.Name, _pet.Name)
+                .CheckProperty(c => c.Temperament, _pet.Temperament)
+                .VerifyTheMappings();
         }
 
-        [Test]
-        public void BreedProperty_Get_MapIsVerified()
-        {
-            _persistenceSpecification.CheckProperty(p => p.Breed, _pet.Breed).VerifyTheMappings();
-        }
-
-        [Test]
-        public void HealthHistoryProperty_Get_MapIsVerified()
-        {
-            _persistenceSpecification.CheckProperty(p => p.HealthHistory, _pet.HealthHistory).VerifyTheMappings();
-        }
-
-        [Test]
-        public void NameProperty_Get_MapIsVerified()
-        {
-            _persistenceSpecification.CheckProperty(p => p.Name, _pet.Name).VerifyTheMappings();
-        }
-
-        [Test]
-        public void TemperamentProperty_Get_MapIsVerified()
-        {
-            _persistenceSpecification.CheckProperty(p => p.Temperament, _pet.Temperament).VerifyTheMappings();
-        }
     }
 }

@@ -12,3 +12,6 @@ C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Repository\bin\Debu
 C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Repository\bin\Debug\NHibernate.xml
 C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Repository\bin\Debug\Iesi.Collections.xml
 C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Repository\bin\Debug\log4net.xml
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Repository\bin\Debug\FluentNHibernate.dll
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Repository\bin\Debug\FluentNHibernate.pdb
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Repository\bin\Debug\FluentNHibernate.xml
