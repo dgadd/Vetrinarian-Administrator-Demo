@@ -3,3 +3,13 @@ C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Domain\bin\Debug\Ga
 C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Domain\obj\Debug\ResolveAssemblyReference.cache
 C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Domain\obj\Debug\Gaddzeit.VetAdmin.Domain.dll
 C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Domain\obj\Debug\Gaddzeit.VetAdmin.Domain.pdb
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Domain\bin\Debug\FluentNHibernate.dll
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Domain\bin\Debug\NHibernate.dll
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Domain\bin\Debug\Iesi.Collections.dll
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Domain\bin\Debug\log4net.dll
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Domain\bin\Debug\Antlr3.Runtime.dll
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Domain\bin\Debug\NHibernate.xml
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Domain\bin\Debug\Iesi.Collections.xml
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Domain\bin\Debug\log4net.xml
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Domain\bin\Debug\FluentNHibernate.pdb
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Domain\bin\Debug\FluentNHibernate.xml

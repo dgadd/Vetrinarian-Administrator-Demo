@@ -2,7 +2,7 @@
 {
     public class DomainEntity
     {
-        public int Id { get; set; }
+        public virtual int Id { get; set; }
 
         public override bool Equals(object obj)
         {
