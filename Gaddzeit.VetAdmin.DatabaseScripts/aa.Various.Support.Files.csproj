@@ -45,19 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="NHibernate support files\NnnnTransaction.txt" />
-    <Content Include="NHibernate support files\NnnnTransactionRepositoryNHibernate.txt" />
-    <Content Include="NHibernate support files\INnnnTransactionRepository.txt" />
-    <Content Include="NHibernate support files\NHibernateHelper.txt" />
-    <Content Include="NHibernate support files\RepositoryFactory.txt" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="NHibernate support files\App.config" />
     <None Include="VetAdmin_createTables.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="NHibernate support files\NnnnTransaction.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
