@@ -60,6 +60,7 @@
     <Compile Include="DomainEntity.cs" />
     <Compile Include="DomainServices\DomainEntityComparer.cs" />
     <Compile Include="DomainServices\EqualityComparerUnhandledComparisonException.cs" />
+    <Compile Include="Mappings\OwnerMap.cs" />
     <Compile Include="Mappings\PetMap.cs" />
     <Compile Include="Owner.cs" />
     <Compile Include="Pet.cs" />

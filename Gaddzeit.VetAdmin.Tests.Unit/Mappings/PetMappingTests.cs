@@ -24,6 +24,7 @@ namespace Gaddzeit.VetAdmin.Tests.Unit.Mappings
         [SetUp]
         public void SetUp()
         {
+            const int id = 3527;
             const string name = "Ira";
             const string breed = "pug";
             const int age = 3;
@@ -32,6 +33,7 @@ namespace Gaddzeit.VetAdmin.Tests.Unit.Mappings
 
             _pet = new Pet
             {
+                Id = id,
                 Name = name,
                 Breed = breed,
                 Age = age,
@@ -41,6 +43,7 @@ namespace Gaddzeit.VetAdmin.Tests.Unit.Mappings
 
             var samePetPlacedIntoSession = new Pet
             {
+                Id = id,
                 Name = name,
                 Breed = breed,
                 Age = age,

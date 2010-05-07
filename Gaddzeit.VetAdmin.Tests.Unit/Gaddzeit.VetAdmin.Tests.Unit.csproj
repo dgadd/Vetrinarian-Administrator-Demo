@@ -81,6 +81,7 @@
   <ItemGroup>
     <Compile Include="Controllers\AddPetFormResponseTests.cs" />
     <Compile Include="Domain\DomainEntityComparerTests.cs" />
+    <Compile Include="Mappings\OwnerMappingTests.cs" />
     <Compile Include="Mappings\FluentNHibernateMappingTester.cs" />
     <Compile Include="Mappings\PetMappingTests.cs" />
     <Compile Include="Presenters\AddPetPresenterTests.cs" />
