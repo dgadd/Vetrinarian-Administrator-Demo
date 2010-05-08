@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using FluentNHibernate.Mapping;
-using FluentNHibernate.Mapping.Providers;
-using FluentNHibernate.MappingModel.ClassBased;
+﻿using FluentNHibernate.Mapping;
 using FluentNHibernate.Testing;
-using Gaddzeit.VetAdmin.Domain;
 using Gaddzeit.VetAdmin.Domain.DomainServices;
-using MvcContrib.TestHelper;
+using Gaddzeit.VetAdmin.Domain.Entities;
+using Gaddzeit.VetAdmin.Domain.Mappings;
 using NBehave.Spec.NUnit;
 using NUnit.Framework;
-using Gaddzeit.VetAdmin.Domain.Mappings;
 
 namespace Gaddzeit.VetAdmin.Tests.Unit.Mappings
 {

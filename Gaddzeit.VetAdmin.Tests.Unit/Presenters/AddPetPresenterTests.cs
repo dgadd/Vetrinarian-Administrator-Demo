@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using Gaddzeit.VetAdmin.Domain.Entities;
 using Gaddzeit.VetAdmin.Presenter;
 using Gaddzeit.VetAdmin.Repository;
 using Gaddzeit.VetAdmin.View;
 using NUnit.Framework;
 using Rhino.Mocks;
-using Rhino.Mocks.Interfaces;
-using Gaddzeit.VetAdmin.Domain;
 
 namespace Gaddzeit.VetAdmin.Tests.Unit.Presenters
 {

@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Gaddzeit.VetAdmin.Domain.Entities;
 using NUnit.Framework;
-using Gaddzeit.VetAdmin.Domain;
 
 namespace Gaddzeit.VetAdmin.Tests.Unit.Domain
 {

@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
+﻿using System.IO;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
+using Gaddzeit.VetAdmin.Domain.Entities;
 using NHibernate;
 using NHibernate.Cfg;
 using NHibernate.Tool.hbm2ddl;
-using Gaddzeit.VetAdmin.Domain;
 
 namespace Gaddzeit.VetAdmin.Repository.NHibernateRepositories
 {

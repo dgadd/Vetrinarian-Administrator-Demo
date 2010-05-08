@@ -7,13 +7,13 @@ using MvcContrib.TestHelper;
 using NBehave.Spec.NUnit;
 using NHibernate;
 using NUnit.Framework;
+using Gaddzeit.VetAdmin.Domain.Entities;
 
 namespace Gaddzeit.VetAdmin.Tests.Unit.Repository
 {
     [TestFixture]
     public class SessionFactoryBuilderTests
     {
-        private const string ProductQualifiedName = "Gaddzeit.VetAdmin.Domain.Pet";
 
         [Test]
         public void GetSqlLiteSessionFactoryMethod_NoInputParams_ReturnsISessionFactory()
@@ -29,10 +29,16 @@ namespace Gaddzeit.VetAdmin.Tests.Unit.Repository
         {
             try
             {
+                ICollection<string> expectedContainer = new List<string>
+                                            {
+                                                "Gaddzeit.VetAdmin.Domain.Entities.Owner",
+                                                "Gaddzeit.VetAdmin.Domain.Entities.Pet"
+                                            };
+
                 var sut = new SessionFactoryBuilder();
                 var result = sut.CreateSqlLiteSessionFactory();
 
-                result.GetAllClassMetadata().Keys.ShouldContain(ProductQualifiedName);
+                result.GetAllClassMetadata().Keys.ShouldEqual(expectedContainer);
             }
             catch (Exception ex)
             {

@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using FluentNHibernate;
-using Gaddzeit.VetAdmin.Domain;
+﻿using FluentNHibernate;
+using Gaddzeit.VetAdmin.Domain.Entities;
 using NHibernate;
 using Rhino.Mocks;
 

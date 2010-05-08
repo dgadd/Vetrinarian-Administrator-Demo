@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using Gaddzeit.VetAdmin.Domain;
+using Gaddzeit.VetAdmin.Domain.Entities;
+using Gaddzeit.VetAdmin.Repository;
 using Gaddzeit.VetAdmin.Repository.NHibernateRepositories;
 using NUnit.Framework;
-using Gaddzeit.VetAdmin.Repository;
 
 namespace Gaddzeit.VetAdmin.Tests.Integration
 {
