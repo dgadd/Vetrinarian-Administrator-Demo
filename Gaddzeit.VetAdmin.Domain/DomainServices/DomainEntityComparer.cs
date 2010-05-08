@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using Gaddzeit.VetAdmin.Domain.Entities;
 
 namespace Gaddzeit.VetAdmin.Domain.DomainServices
@@ -16,6 +17,8 @@ namespace Gaddzeit.VetAdmin.Domain.DomainServices
                 return Convert.ToDecimal(x).Equals(Convert.ToDecimal(y));
             if (x is int && y is int)
                 return int.Parse(x.ToString()).Equals(int.Parse(y.ToString()));
+            if (x is HashSet<Pet> && y is HashSet<Pet>)
+                return ((HashSet<Pet>) x).IsSubsetOf((HashSet<Pet>) y);
             if (x is Address && y is Address)
                 return ((Address)x).Street.Equals(((Address)y).Street)
                        && ((Address)x).City.Equals(((Address)y).City)
@@ -35,6 +38,8 @@ namespace Gaddzeit.VetAdmin.Domain.DomainServices
                 return Convert.ToDecimal(obj).GetHashCode();
             if (obj is int)
                 return int.Parse(obj.ToString()).GetHashCode();
+            if (obj is HashSet<Pet>)
+                return ((HashSet<Pet>) obj).GetHashCode();
             if (obj is Address)
                 return ((Address)obj).GetHashCode();
             throw new EqualityComparerUnhandledComparisonException();

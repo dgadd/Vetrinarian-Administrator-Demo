@@ -1,4 +1,5 @@
-﻿using FluentNHibernate.Mapping;
+﻿using System.Collections.Generic;
+using FluentNHibernate.Mapping;
 using FluentNHibernate.Testing;
 using Gaddzeit.VetAdmin.Domain.DomainServices;
 using Gaddzeit.VetAdmin.Domain.Entities;
@@ -61,8 +62,7 @@ namespace Gaddzeit.VetAdmin.Tests.Unit.Mappings
                 .CheckProperty(c => c.Id, _owner.Id)
                 .CheckProperty(c => c.FirstName, _owner.FirstName)
                 .CheckProperty(c => c.LastName, _owner.LastName)
-                //.CheckComponentList(c => c.Pets, _owner.Pets)
-                //.CheckReference(c => c.Pets, _owner.Pets)
+                .CheckProperty(c => c.Pets, _owner.Pets)
                 .CheckProperty(c => c.Address, _owner.Address)
                 .VerifyTheMappings();
         }
