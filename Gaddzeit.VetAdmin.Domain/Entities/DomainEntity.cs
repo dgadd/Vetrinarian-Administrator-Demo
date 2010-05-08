@@ -1,4 +1,4 @@
-﻿namespace Gaddzeit.VetAdmin.Domain
+﻿namespace Gaddzeit.VetAdmin.Domain.Entities
 {
     public class DomainEntity
     {

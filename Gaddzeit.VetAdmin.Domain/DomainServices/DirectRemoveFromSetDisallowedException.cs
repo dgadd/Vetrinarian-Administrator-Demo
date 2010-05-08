@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Gaddzeit.VetAdmin.Domain
+namespace Gaddzeit.VetAdmin.Domain.DomainServices
 {
     public class DirectRemoveFromSetDisallowedException : Exception
     {

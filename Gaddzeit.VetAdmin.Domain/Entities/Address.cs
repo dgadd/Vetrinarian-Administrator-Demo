@@ -1,22 +1,27 @@
 ﻿using System;
 
-namespace Gaddzeit.VetAdmin.Domain
+namespace Gaddzeit.VetAdmin.Domain.Entities
 {
     public class Address
     {
-        private readonly string _street;
-        private readonly string _city;
-        private readonly string _province;
-        private readonly string _postalCode;
+        public string Street { get; private set; }
+        public string City { get; private set; }
+        public string Province { get; private set; }
+        public string PostalCode { get; private set; }
+
+        // required by NHibernate
+        private Address()
+        {
+        }
 
         public Address(string street, string city, string province, string postalCode)
         {
             RejectNullParams(street, city, province, postalCode);
 
-            _street = street;
-            _city = city;
-            _province = province;
-            _postalCode = postalCode;
+            Street = street;
+            City = city;
+            Province = province;
+            PostalCode = postalCode;
         }
 
         private static void RejectNullParams(string street, string city, string province, string postalCode)
@@ -26,26 +31,6 @@ namespace Gaddzeit.VetAdmin.Domain
                && string.IsNullOrEmpty(province)
                && string.IsNullOrEmpty(postalCode))
                 throw new ArgumentNullException();
-        }
-
-        public string PostalCode
-        {
-            get { return _postalCode; }
-        }
-
-        public string Province
-        {
-            get { return _province; }
-        }
-
-        public string City
-        {
-            get { return _city; }
-        }
-
-        public string Street
-        {
-            get { return _street; }
         }
 
         public override bool Equals(object obj)

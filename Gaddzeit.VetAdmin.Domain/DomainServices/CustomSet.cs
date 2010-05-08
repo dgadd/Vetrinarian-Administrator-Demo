@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Gaddzeit.VetAdmin.Domain
+namespace Gaddzeit.VetAdmin.Domain.DomainServices
 {
     public class CustomSet<T> : ICollection<T>
     {
