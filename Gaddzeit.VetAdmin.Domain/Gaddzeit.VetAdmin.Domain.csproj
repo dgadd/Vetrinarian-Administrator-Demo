@@ -53,17 +53,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Address.cs" />
-    <Compile Include="CustomSet.cs" />
-    <Compile Include="DirectAddToSetDisallowedException.cs" />
-    <Compile Include="DirectRemoveFromSetDisallowedException.cs" />
-    <Compile Include="DomainEntity.cs" />
+    <Compile Include="Entities\Address.cs" />
+    <Compile Include="Entities\DomainEntity.cs" />
     <Compile Include="DomainServices\DomainEntityComparer.cs" />
     <Compile Include="DomainServices\EqualityComparerUnhandledComparisonException.cs" />
     <Compile Include="Mappings\OwnerMap.cs" />
     <Compile Include="Mappings\PetMap.cs" />
-    <Compile Include="Owner.cs" />
-    <Compile Include="Pet.cs" />
+    <Compile Include="Entities\Owner.cs" />
+    <Compile Include="Entities\Pet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,4 @@
-﻿using Gaddzeit.VetAdmin.Domain;
+﻿using Gaddzeit.VetAdmin.Domain.Entities;
 using Gaddzeit.VetAdmin.Repository;
 using Gaddzeit.VetAdmin.View;
 

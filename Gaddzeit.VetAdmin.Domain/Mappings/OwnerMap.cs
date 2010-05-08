@@ -1,4 +1,5 @@
 ﻿using FluentNHibernate.Mapping;
+using Gaddzeit.VetAdmin.Domain.Entities;
 
 namespace Gaddzeit.VetAdmin.Domain.Mappings
 {
@@ -9,7 +10,10 @@ namespace Gaddzeit.VetAdmin.Domain.Mappings
             Id(x => x.Id);
             Map(x => x.FirstName);
             Map(x => x.LastName);
-            References(x => x.Pets);
+            HasMany(x => x.Pets)
+                .Cascade.All()
+                .Inverse()
+                .Table("Pet");
 
             Component(x => x.Address, m =>
             {

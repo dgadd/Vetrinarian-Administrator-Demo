@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using Gaddzeit.VetAdmin.Domain;
+using Gaddzeit.VetAdmin.Domain.Entities;
 
 namespace Gaddzeit.VetAdmin.Repository
 {

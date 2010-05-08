@@ -1,34 +1,28 @@
-﻿using Gaddzeit.VetAdmin.Domain.DomainServices;
+﻿using System.Collections.Generic;
+using Gaddzeit.VetAdmin.Domain.DomainServices;
 
 namespace Gaddzeit.VetAdmin.Domain.Entities
 {
     public class Owner : DomainEntity
     {
-        private readonly CustomSet<Pet> _pets;
-
         public Owner()
         {
-            _pets = new CustomSet<Pet>();
+            Pets = new HashSet<Pet>();
         }
 
-        public Address Address { get; set; }
-        public string LastName { get; set; }
-        public string FirstName { get; set; }
+        public virtual Address Address { get; set; }
+        public virtual string LastName { get; set; }
+        public virtual string FirstName { get; set; }
+        public virtual HashSet<Pet> Pets { get; private set; }
 
-        public void AddPet(Pet pet)
+        public virtual void AddPet(Pet pet)
         {
-            _pets.AddAssociatedEntityToParentWithinDomain(pet);
+            Pets.Add(pet);
         }
 
-        public void RemovePet(Pet pet)
+        public virtual void RemovePet(Pet pet)
         {
-            _pets.RemoveAssociatedEntityFromParentWithinDomain(pet);
+            Pets.Remove(pet);
         }
-
-        public CustomSet<Pet> Pets
-        {
-            get { return _pets; }
-        }
-
     }
 }
