@@ -10,12 +10,12 @@ using NUnit.Framework;
 namespace Gaddzeit.VetAdmin.Tests.Integration
 {
     [TestFixture]
-    public class NHibernatePetRepositoryTests
+    public class PetRepositoryNHbnTests
     {
         [Test]
         public void Constructor_NoInputParams_IsInstanceOfIPetRepository()
         {
-            var sut = new NHibernatePetRepository();
+            var sut = new PetRepositoryNHbn();
             Assert.IsInstanceOfType(typeof(IPetRepository), sut);
         }
 
@@ -47,7 +47,7 @@ namespace Gaddzeit.VetAdmin.Tests.Integration
 
             var expectedPetsSet = new HashSet<Pet>(expectedPetsList);
 
-            var sut = new NHibernatePetRepository();
+            var sut = new PetRepositoryNHbn();
             var petsFromRepository = sut.FindAll();
 
             foreach(var pet in expectedPetsSet)

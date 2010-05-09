@@ -4,7 +4,7 @@ using Gaddzeit.VetAdmin.Domain.Entities;
 
 namespace Gaddzeit.VetAdmin.Repository
 {
-    public class FakePetRepository : IPetRepository
+    public class PetRepositoryFake : IPetRepository
     {
         public void SavePet(Pet pet)
         {

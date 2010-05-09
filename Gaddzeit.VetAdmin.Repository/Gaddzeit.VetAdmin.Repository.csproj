@@ -54,10 +54,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FakePetRepository.aspx.cs" />
+    <Compile Include="PetRepository_Fake.cs" />
     <Compile Include="IPetRepository.cs" />
-    <Compile Include="NHibernateRepositories\NHibernateDataProvider.cs" />
-    <Compile Include="NHibernateRepositories\NHibernatePetRepository.cs" />
+    <Compile Include="NHibernateRepositories\PetRepositoryNHbn.cs" />
     <Compile Include="NHibernateRepositories\SessionFactoryBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

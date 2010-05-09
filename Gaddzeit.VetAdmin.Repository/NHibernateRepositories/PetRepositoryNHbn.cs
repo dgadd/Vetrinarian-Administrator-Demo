@@ -5,11 +5,11 @@ using NHibernate;
 
 namespace Gaddzeit.VetAdmin.Repository.NHibernateRepositories
 {
-    public class NHibernatePetRepository : IPetRepository
+    public class PetRepositoryNHbn : IPetRepository
     {
-        private SessionFactoryBuilder _factoryBuilder;
+        private readonly SessionFactoryBuilder _factoryBuilder;
 
-        public NHibernatePetRepository()
+        public PetRepositoryNHbn()
         {
             _factoryBuilder = new SessionFactoryBuilder();
         }
@@ -22,7 +22,6 @@ namespace Gaddzeit.VetAdmin.Repository.NHibernateRepositories
         {
             using (var session = _factoryBuilder.CreateSqlServerSessionFactory().OpenSession())
             {
-                // retreive all stores and display them
                 using (session.BeginTransaction())
                 {
                     const string hqlQuery = "from Pet pet ";

@@ -66,14 +66,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NHibernateDataProviderTests.cs" />
-    <Compile Include="NHibernatePetRepositoryTests.cs" />
+    <Compile Include="PetRepositoryNHbnTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="hibernate.cfg.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Gaddzeit.VetAdmin.Domain\Gaddzeit.VetAdmin.Domain.csproj">
