@@ -17,7 +17,7 @@ namespace VetAdmin
 
         protected override void OnInit(EventArgs e)
         {
-            _addPetPresenter = new AddPetPresenter(new FakePetRepository(), this);
+            _addPetPresenter = new AddPetPresenter(new PetRepositoryFake(), this);
             base.OnInit(e);
         }
 

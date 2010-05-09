@@ -36,3 +36,5 @@ C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debu
 C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\NHibernate.ByteCode.Castle.dll
 C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\NHibernate.ByteCode.Castle.xml
 C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\System.Data.SQLite.DLL
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\Gaddzeit.VetAdmin.Shared.dll
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\Gaddzeit.VetAdmin.Shared.pdb

@@ -9,14 +9,14 @@
 <body class="bodyOrange">
     <div class="goBackTop"><a href="http://gaddzeit.com">[gaddzeit.com]</a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    Demonstration site for ASP.NET MVC2
+    Demonstration site for ASP.NET MVC2 and FluentNHibernate
     </div>
     <div class="lightYellowHeader">
     &nbsp;<img alt="petCat" src="~/Content/Pics/petCat.jpg" runat="server" />
     Vet Admin   <a href="http://codingsolutions.blogspot.com/2010/01/linking-tdd-kata-to-creating-user.html">(user stories for app)</a>
     </div>
     <div class="leftNavBar">
-    <a href="<%=Url.Content("~/PetManagement/FindAll/5/1")%>">Find All Pets</a>
+    <a href="<%=Url.Content("~/PetManagement/FindAll/15/1")%>">Find All Pets</a>
     <br />
     <a href="<%=Url.Content("~/PetManagement/AddPet")%>">Add Pet</a>    
     </div>

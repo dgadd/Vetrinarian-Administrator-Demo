@@ -9,4 +9,5 @@
   <Module PersistentId="8F4242E0-0A4F-44C0-A59B-523BFA5B7FBB" ModuleId="Gaddzeit.VetAdmin.DatabaseScripts" />
   <Module PersistentId="E1BE1A77-76E8-41FD-89F1-1838B61E0AD3" ModuleId="Gaddzeit.VetAdmin.Tests.Integration" />
   <Module PersistentId="B8ACC5F8-66E6-45A4-838F-DBC84C4D0A8F" ModuleId="VetAdminMvc2" />
+  <Module PersistentId="9589C20D-6F0C-467A-A778-BB64D4CF15ED" ModuleId="Gaddzeit.VetAdmin.Shared" />
 </Modules>

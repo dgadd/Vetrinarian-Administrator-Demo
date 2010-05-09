@@ -1,4 +1,4 @@
-<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<List<Gaddzeit.VetAdmin.Domain.Pet>>" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<List<Gaddzeit.VetAdmin.Domain.Entities.Pet>>" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="Main" Runat="Server">
 <div>
@@ -7,9 +7,19 @@
 	&nbsp;<br />
 	
 	<table class="tableRefined" border="0">
-	    <tr><th class="tdRefined">Name</th><th class="tdRefined">Breed</th><th class="tdRefined">Age</th></tr>
+	    <tr>
+	        <th class="tdRefined">Name</th>
+	        <th class="tdRefined">Breed</th>
+	        <th class="tdRefined">Age</th>
+	        <th class="tdRefined">Health History</th>
+	    </tr>
 	<% foreach(var pet in Model) { %>
-	    <tr><td class="tdRefined"><%= pet.Name %></td><td class="tdRefined"><%= pet.Breed %></td><td class="tdRefined"><%= pet.Age %></td></tr>
+	    <tr>
+	        <td class="tdRefined"><%= pet.Name %></td>
+	        <td class="tdRefined"><%= pet.Breed %></td>
+	        <td class="tdRefined"><%= pet.Age %></td>
+	        <td class="tdRefined"><%= pet.HealthHistory %></td>
+	    </tr>
     <% } %>
     </table>
 </div>   

@@ -1,4 +1,4 @@
-<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<List<Gaddzeit.VetAdmin.Domain.Pet>>" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<List<Gaddzeit.VetAdmin.Domain.Entities.Pet>>" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="Main" Runat="Server">
 <div>

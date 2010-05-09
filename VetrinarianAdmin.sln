@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetAdminMvc2", "VetAdminMvc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetAdminMvc", "VetAdminMvc\VetAdminMvc.csproj", "{0374D8EC-BC49-441D-96F5-F08CFE7107B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gaddzeit.VetAdmin.Shared", "Gaddzeit.VetAdmin.Shared\Gaddzeit.VetAdmin.Shared.csproj", "{9589C20D-6F0C-467A-A778-BB64D4CF15ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{0374D8EC-BC49-441D-96F5-F08CFE7107B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0374D8EC-BC49-441D-96F5-F08CFE7107B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0374D8EC-BC49-441D-96F5-F08CFE7107B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9589C20D-6F0C-467A-A778-BB64D4CF15ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9589C20D-6F0C-467A-A778-BB64D4CF15ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9589C20D-6F0C-467A-A778-BB64D4CF15ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9589C20D-6F0C-467A-A778-BB64D4CF15ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
