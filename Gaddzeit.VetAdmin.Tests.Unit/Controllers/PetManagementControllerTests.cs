@@ -39,7 +39,9 @@ namespace Gaddzeit.VetAdmin.Tests.Unit.Controllers
                                    new Pet {Name = "Roger", Breed = "calico", Age = 14, Temperament = "gentle"},
                                };
 
-            _petRepository.Stub(petRep => petRep.FindAll()).Return(petsList);
+            var petsSet = new HashSet<Pet>(petsList);
+
+            _petRepository.Stub(petRep => petRep.FindAll()).Return(petsSet);
 
 
             const int howManyRowsPerPage = 3;

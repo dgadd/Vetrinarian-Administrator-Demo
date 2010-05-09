@@ -3,6 +3,8 @@ using System.Linq;
 using Gaddzeit.VetAdmin.Domain.Entities;
 using Gaddzeit.VetAdmin.Repository;
 using Gaddzeit.VetAdmin.Repository.NHibernateRepositories;
+using MvcContrib.TestHelper;
+using NBehave.Spec.NUnit;
 using NUnit.Framework;
 
 namespace Gaddzeit.VetAdmin.Tests.Integration
@@ -18,26 +20,40 @@ namespace Gaddzeit.VetAdmin.Tests.Integration
         }
 
         [Test]
-        [Ignore("Rather than mapping legacy XML, will switch to FluentNHibernate in next while.")]
         public void FindAllMethod_NoInputParams_ReturnsSandboxedDatabaseValues()
         {
-            var expectedPets = new List<Pet>
-                               {
-                                   new Pet {Name = "Fido", Breed = "beagle", Age = 3, Temperament = "gentle"},
-                                   new Pet {Name = "Ira", Breed = "pug", Age = 5, Temperament = "gentle"},
-                                   new Pet {Name = "Clarence", Breed = "beagle mix", Age = 2, Temperament = "gentle"},
-                                   new Pet {Name = "Sandy", Breed = "mixed", Age = 9, Temperament = "gentle"},
-                                   new Pet
-                                       {Name = "Melody", Breed = "american shorthair", Age = 4, Temperament = "gentle"},
-                                   new Pet {Name = "Skinny", Breed = "barn cat", Age = 10, Temperament = "gentle"},
-                                   new Pet {Name = "Jenny", Breed = "blue heeler", Age = 2, Temperament = "gentle"},
-                                   new Pet {Name = "Roger", Breed = "calico", Age = 14, Temperament = "gentle"},
-                               }.AsQueryable(); 
+            var expectedPetsList = new List<Pet>
+                                   {
+                                       new Pet {Id = 1},
+                                       new Pet {Id = 2},
+                                       new Pet {Id = 3},
+                                       new Pet {Id = 4},
+                                       new Pet {Id = 5},
+                                       new Pet {Id = 6},
+                                       new Pet {Id = 7},
+                                       new Pet {Id = 8},
+                                       new Pet {Id = 9},
+                                       new Pet {Id = 10},
+                                       new Pet {Id = 11},
+                                       new Pet {Id = 12},
+                                       new Pet {Id = 13},
+                                       new Pet {Id = 14},
+                                       new Pet {Id = 15},
+                                       new Pet {Id = 16},
+                                       new Pet {Id = 17},
+                                       new Pet {Id = 18},
+                                       new Pet {Id = 19}
+                                   };
+
+            var expectedPetsSet = new HashSet<Pet>(expectedPetsList);
 
             var sut = new NHibernatePetRepository();
-            var petsFromDb = sut.FindAll();
+            var petsFromRepository = sut.FindAll();
 
-            Assert.AreSame(expectedPets, petsFromDb, "Expected sandboxed db values not retrieved.");
+            foreach(var pet in expectedPetsSet)
+            {
+                petsFromRepository.ShouldContain(pet);
+            }
         }
     }
 }

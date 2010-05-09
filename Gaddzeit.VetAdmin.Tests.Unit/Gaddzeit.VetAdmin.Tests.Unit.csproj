@@ -107,6 +107,10 @@
       <Project>{6358F822-C39C-4007-AAFC-BFBF876F60E7}</Project>
       <Name>Gaddzeit.VetAdmin.Repository</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Gaddzeit.VetAdmin.Shared\Gaddzeit.VetAdmin.Shared.csproj">
+      <Project>{9589C20D-6F0C-467A-A778-BB64D4CF15ED}</Project>
+      <Name>Gaddzeit.VetAdmin.Shared</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Gaddzeit.VetAdmin.View\Gaddzeit.VetAdmin.View.csproj">
       <Project>{81DE3DDC-E6C8-45FB-BF6D-2F9EA92F8359}</Project>
       <Name>Gaddzeit.VetAdmin.View</Name>

@@ -6,6 +6,6 @@ namespace Gaddzeit.VetAdmin.Repository
     public interface IPetRepository
     {
         void SavePet(Pet pet);
-        IList<Pet> FindAll();
+        HashSet<Pet> FindAll();
     }
 }

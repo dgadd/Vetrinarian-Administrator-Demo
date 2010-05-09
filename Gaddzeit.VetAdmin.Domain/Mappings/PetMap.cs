@@ -11,7 +11,7 @@ namespace Gaddzeit.VetAdmin.Domain.Mappings
     {
         public PetMap()
         {
-            Id(x => x.Id);
+            Id(x => x.Id).Column("PetID");
             Map(x => x.Age);
             Map(x => x.Breed);
             Map(x => x.HealthHistory);
