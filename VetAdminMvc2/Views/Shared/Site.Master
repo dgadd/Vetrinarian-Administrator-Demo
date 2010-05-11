@@ -9,7 +9,7 @@
 <body class="bodyOrange">
     <div class="goBackTop"><a href="http://gaddzeit.com">[gaddzeit.com]</a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    Demonstration site for ASP.NET MVC2 and FluentNHibernate
+    Demonstration site for ASP.NET MVC2 and FluentNHibernate | view <a href="http://github.com/dgadd/Vetrinarian-Administrator-Demo">src at github</a>
     </div>
     <div class="lightYellowHeader">
     &nbsp;<img alt="petCat" src="~/Content/Pics/petCat.jpg" runat="server" />
