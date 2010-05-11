@@ -20,6 +20,15 @@ namespace Gaddzeit.VetAdmin.Tests.Integration
         }
 
         [Test]
+        public void SaveMethod_PetInput_IsSuccessful()
+        {
+            var sut = new PetRepositoryNHbn();
+            var pet = new Pet() {Age = 8, Breed = "pug", Name = "Integration Test Record", Temperament = "cheery", ModifiedBy = "unit test"};
+            sut.SavePet(pet);
+            pet.Id.ShouldBeGreaterThan(0);
+        }
+
+        [Test]
         public void FindAllMethod_NoInputParams_ReturnsSandboxedDatabaseValues()
         {
             var expectedPetsList = new List<Pet>

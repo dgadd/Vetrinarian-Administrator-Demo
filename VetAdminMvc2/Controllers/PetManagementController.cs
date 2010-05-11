@@ -18,7 +18,8 @@ namespace VetAdminMvc2.Controllers
         public ViewResult AddPet()
         {
             ViewData.Add("message", "Please enter details for this pet.");
-            return View();
+            var model = new AddPetFormResponse();
+            return View(model);
         }
 
         public ViewResult SavePet(AddPetFormResponse addPetFormResponse)
@@ -30,10 +31,11 @@ namespace VetAdminMvc2.Controllers
                               Name = addPetFormResponse.Name,
                               Breed = addPetFormResponse.Breed,
                               Age = addPetFormResponse.Age.Value,
-                              HealthHistory = addPetFormResponse.HealthHistory
+                              HealthHistory = addPetFormResponse.HealthHistory,
+                              ModifiedBy = "anonymous web user"
                           };
                 _petRepository.SavePet(pet);
-                ViewData.Add("message", "Pet details have been saved.");
+                ViewData.Add("message", string.Format("{0} has been added to VetAdmin.", addPetFormResponse.Name));
             }
             else
             {

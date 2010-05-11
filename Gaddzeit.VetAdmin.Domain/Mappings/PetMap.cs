@@ -17,6 +17,8 @@ namespace Gaddzeit.VetAdmin.Domain.Mappings
             Map(x => x.HealthHistory);
             Map(x => x.Name);
             Map(x => x.Temperament);
+            Map(x => x.ModifiedBy);
+            Map(x => x.ModifiedDate);
         }
     }
 }

@@ -79,14 +79,15 @@ namespace Gaddzeit.VetAdmin.Tests.Unit.Controllers
                 Name = apfr.Name,
                 Breed = apfr.Breed,
                 Age = apfr.Age.HasValue ? apfr.Age.Value : 0,
-                HealthHistory = apfr.HealthHistory
+                HealthHistory = apfr.HealthHistory,
+                ModifiedBy = "unit test"
             };
             _petRepository.SavePet(pet);
             
             var sut = new PetManagementController(_petRepository);
             var viewResult = (ViewResult) sut.SavePet(apfr);
 
-            viewResult.ViewData["Message"].ShouldBe("Pet details have been saved.");
+            viewResult.ViewData["Message"].ShouldBe(string.Format("{0} has been added to VetAdmin.", apfr.Name));
             viewResult.AssertViewRendered().ViewName.ShouldEqual("");
         }
     }

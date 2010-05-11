@@ -1,4 +1,5 @@
-﻿using FluentNHibernate.Mapping;
+﻿using System;
+using FluentNHibernate.Mapping;
 using FluentNHibernate.Testing;
 using Gaddzeit.VetAdmin.Domain.DomainServices;
 using Gaddzeit.VetAdmin.Domain.Entities;
@@ -23,6 +24,8 @@ namespace Gaddzeit.VetAdmin.Tests.Unit.Mappings
             const int age = 3;
             const string temperament = "gentle";
             const string healthHistory = "breathing issues";
+            var modifiedBy = "unit test";
+            var modifiedDate = DateTime.Today;
 
             _pet = new Pet
             {
@@ -31,7 +34,9 @@ namespace Gaddzeit.VetAdmin.Tests.Unit.Mappings
                 Breed = breed,
                 Age = age,
                 Temperament = temperament,
-                HealthHistory = healthHistory
+                HealthHistory = healthHistory,
+                ModifiedBy = modifiedBy,
+                ModifiedDate = modifiedDate
             };
 
             var samePetPlacedIntoSession = new Pet
@@ -41,7 +46,9 @@ namespace Gaddzeit.VetAdmin.Tests.Unit.Mappings
                 Breed = breed,
                 Age = age,
                 Temperament = temperament,
-                HealthHistory = healthHistory
+                HealthHistory = healthHistory,
+                ModifiedBy = modifiedBy,
+                ModifiedDate = modifiedDate
             };
 
             var sessionSource = FluentNHibernateMappingTester.GetNHibernateSessionWithWrappedEntity(samePetPlacedIntoSession);

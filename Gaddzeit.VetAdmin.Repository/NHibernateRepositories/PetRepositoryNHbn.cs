@@ -15,7 +15,15 @@ namespace Gaddzeit.VetAdmin.Repository.NHibernateRepositories
         }
         public void SavePet(Pet pet)
         {
-            throw new NotImplementedException();
+            using (var session = _factoryBuilder.CreateSqlServerSessionFactory().OpenSession())
+            {
+                using (session.BeginTransaction())
+                {
+                    pet.ModifiedDate = DateTime.Now;
+                    session.Save(pet);
+                    session.Transaction.Commit();
+                }
+            }
         }
 
         public HashSet<Pet> FindAll()
