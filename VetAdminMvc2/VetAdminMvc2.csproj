@@ -133,6 +133,10 @@
       <Project>{6358F822-C39C-4007-AAFC-BFBF876F60E7}</Project>
       <Name>Gaddzeit.VetAdmin.Repository</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Gaddzeit.VetAdmin.Shared\Gaddzeit.VetAdmin.Shared.csproj">
+      <Project>{9589C20D-6F0C-467A-A778-BB64D4CF15ED}</Project>
+      <Name>Gaddzeit.VetAdmin.Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

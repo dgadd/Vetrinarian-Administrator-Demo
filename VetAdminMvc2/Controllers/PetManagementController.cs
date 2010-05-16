@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using Gaddzeit.VetAdmin.Domain.Entities;
 using Gaddzeit.VetAdmin.Repository;
+using Gaddzeit.VetAdmin.Shared;
 using VetAdminMvc2.Models;
 
 namespace VetAdminMvc2.Controllers
@@ -44,14 +45,20 @@ namespace VetAdminMvc2.Controllers
             return View();            
         }
 
-        public ViewResult FindAll(int howManyRowsPerPage, int whichPage)
+        public ViewResult FindAll(int howManyRowsPerPage, int? whichPage)
         {
-            var petsSubset = _petRepository.FindAll()
-                .Skip((whichPage - 1)* howManyRowsPerPage)
-                .Take(howManyRowsPerPage)
-                .ToList();
+            var petsSubset = _petRepository.FindAll().AsQueryable();
+            var paginatedPets = new PaginatedList<Pet>(petsSubset, whichPage ?? 0, howManyRowsPerPage);
 
-            return View(petsSubset);
+            
+            //.Skip((whichPage - 1)* howManyRowsPerPage)
+                //.Take(howManyRowsPerPage)
+                //.ToList();
+
+            //var upcomingDinners = dinnerRepository.FindUpcomingDinners();
+            //var paginatedDinners = new PaginatedList<Dinner>(upcomingDinners, page ?? 0, pageSize);
+
+            return View(paginatedPets);
         }
     }
 }
