@@ -45,19 +45,13 @@ namespace VetAdminMvc2.Controllers
             return View();            
         }
 
-        public ViewResult FindAll(int howManyRowsPerPage, int? whichPage)
+        public ViewResult FindAll(int? page)
         {
+            const int howManyRowsPerPage = 8;
+
             var petsSubset = _petRepository.FindAll().AsQueryable();
-            var paginatedPets = new PaginatedList<Pet>(petsSubset, whichPage ?? 0, howManyRowsPerPage);
-
-            
-            //.Skip((whichPage - 1)* howManyRowsPerPage)
-                //.Take(howManyRowsPerPage)
-                //.ToList();
-
-            //var upcomingDinners = dinnerRepository.FindUpcomingDinners();
-            //var paginatedDinners = new PaginatedList<Dinner>(upcomingDinners, page ?? 0, pageSize);
-
+            var paginatedPets = new PaginatedList<Pet>(petsSubset, page ?? 0, howManyRowsPerPage);
+           
             return View(paginatedPets);
         }
     }

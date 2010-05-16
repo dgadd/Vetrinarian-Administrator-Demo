@@ -16,7 +16,7 @@
     Vet Admin   <a href="http://codingsolutions.blogspot.com/2010/01/linking-tdd-kata-to-creating-user.html">(user stories for app)</a>
     </div>
     <div class="leftNavBar">
-    <a href="<%=Url.Content("~/PetManagement/FindAll/10/1")%>">Find All Pets</a>
+    <a href="<%=Url.Content("~/PetManagement/FindAll/Page/0")%>">Find All Pets</a>
     <br />
     <a href="<%=Url.Content("~/PetManagement/AddPet")%>">Add Pet</a>    
     </div>

@@ -45,14 +45,14 @@ namespace Gaddzeit.VetAdmin.Tests.Unit.Controllers
 
 
             const int howManyRowsPerPage = 3;
-            const int whichPage = 2;
+            const int page = 2;
             var petsSubset = _petRepository.FindAll()
-                .Skip((whichPage - 1) * howManyRowsPerPage)
+                .Skip((page - 1) * howManyRowsPerPage)
                 .Take(howManyRowsPerPage)
                 .ToList();
 
             var sut = new PetManagementController(_petRepository);
-            var viewResult = (ViewResult) sut.FindAll(howManyRowsPerPage, whichPage);
+            var viewResult = (ViewResult) sut.FindAll(page);
 
             viewResult.ViewData.Model.ShouldEqual(petsSubset);
             viewResult.AssertViewRendered().ViewName.ShouldEqual("");

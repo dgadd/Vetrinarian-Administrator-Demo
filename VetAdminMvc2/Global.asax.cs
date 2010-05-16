@@ -19,14 +19,14 @@ namespace VetAdminMvc2
             routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}/{id}", // URL with parameters
-                new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
-            );
+                new {controller = "Home", action = "Index", id = UrlParameter.Optional} // Parameter defaults
+                );
 
             routes.MapRoute(
-                null,   // Don't bother giving this route entry a name
-                "{controller}/{action}/{howManyRowsPerPage}/{whichPage}",
-                new { controller = "PetManagement", action = "FindAll", howManyRowsPerPage = 5, whichPage = 1 } // Defaults
-            );
+                "FindAllPetsPaginated", // Route name
+                "PetManagement/FindAll/Page/{page}", // URL with params
+                new {controller = "PetManagement", action = "FindAll" } // Param defaults
+                );
 
         }
 
