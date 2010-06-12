@@ -27,10 +27,10 @@
 	    </tr>
 	<% foreach(var pet in Model) { %>
 	    <tr>
-	        <td class="tdRefined"><%= pet.Name %></td>
-	        <td class="tdRefined"><%= pet.Breed %></td>
-	        <td class="tdRefined"><%= pet.Age %></td>
-	        <td class="tdRefined"><%= pet.HealthHistory %></td>
+	        <td class="tdRefined"><%= Html.Encode(pet.Name)%></td>
+	        <td class="tdRefined"><%= Html.Encode(pet.Breed)%></td>
+	        <td class="tdRefined"><%= Html.Encode(pet.Age)%></td>
+	        <td class="tdRefined"><%= Html.Encode(pet.HealthHistory)%></td>
 	    </tr>
     <% } %>
     </table>
