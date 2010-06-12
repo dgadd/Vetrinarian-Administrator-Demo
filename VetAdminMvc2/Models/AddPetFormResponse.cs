@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 using System.ComponentModel;
@@ -10,9 +11,14 @@ namespace VetAdminMvc2.Models
     {
         private string _errorMessage;
 
+        [DisplayName("Name of Pet")]     
         public string Name { get; set; }
+
         public string Breed { get; set; }
+        
         public int? Age { get; set; }
+
+        [DisplayName("Health History")]
         public string HealthHistory { get; set; }
 
         #region IDataErrorInfo Members
