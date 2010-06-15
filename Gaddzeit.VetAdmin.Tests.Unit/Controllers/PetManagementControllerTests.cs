@@ -85,10 +85,10 @@ namespace Gaddzeit.VetAdmin.Tests.Unit.Controllers
             _petRepository.SavePet(pet);
             
             var sut = new PetManagementController(_petRepository);
-            var viewResult = (ViewResult) sut.SavePet(apfr);
+            var redirectToRouteResult = (RedirectToRouteResult) sut.SavePet(apfr);
 
-            viewResult.ViewData["Message"].ShouldBe(string.Format("{0} has been added to VetAdmin.", apfr.Name));
-            viewResult.AssertViewRendered().ViewName.ShouldEqual("");
+            sut.TempData["Message"].ShouldBe(string.Format("{0} has been added to VetAdmin.", apfr.Name));
+            redirectToRouteResult.AssertActionRedirect().ToAction("Success");
         }
     }
 }

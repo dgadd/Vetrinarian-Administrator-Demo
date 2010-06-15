@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Web.Mvc;
 using Gaddzeit.VetAdmin.Domain.Entities;
 using Gaddzeit.VetAdmin.Repository;
@@ -23,11 +24,24 @@ namespace VetAdminMvc2.Controllers
             return View(model);
         }
 
-        public ViewResult SavePet(AddPetFormResponse addPetFormResponse)
+        public ActionResult SavePet(AddPetFormResponse addPetFormResponse)
         {
             if (ModelState.IsValid)
             {
-                var pet = new Pet
+                SavePetFormDataToRepository(addPetFormResponse);
+                TempData.Add("message", string.Format("{0} has been added to VetAdmin.", addPetFormResponse.Name));
+                return RedirectToAction("Success");
+            }
+            else
+            {
+                ViewData.Add("message", addPetFormResponse.Error);
+            }
+            return View();
+        }
+
+        private void SavePetFormDataToRepository(AddPetFormResponse addPetFormResponse)
+        {
+            var pet = new Pet
                           {
                               Name = addPetFormResponse.Name,
                               Breed = addPetFormResponse.Breed,
@@ -35,14 +49,7 @@ namespace VetAdminMvc2.Controllers
                               HealthHistory = addPetFormResponse.HealthHistory,
                               ModifiedBy = "anonymous web user"
                           };
-                _petRepository.SavePet(pet);
-                ViewData.Add("message", string.Format("{0} has been added to VetAdmin.", addPetFormResponse.Name));
-            }
-            else
-            {
-                ViewData.Add("message", addPetFormResponse.Error);
-            }
-            return View();            
+            _petRepository.SavePet(pet);
         }
 
         public ViewResult FindAll(int? page)
@@ -51,8 +58,20 @@ namespace VetAdminMvc2.Controllers
 
             var petsSubset = _petRepository.FindAll().AsQueryable();
             var paginatedPets = new PaginatedList<Pet>(petsSubset, page ?? 0, howManyRowsPerPage);
-           
+
             return View(paginatedPets);
+        }
+
+        public ActionResult Success()
+        {
+            if (TempData["message"] != null)
+            {
+                var message = TempData["message"].ToString();
+                ViewData.Add("message", message);
+            }
+
+            return View();
+
         }
     }
 }

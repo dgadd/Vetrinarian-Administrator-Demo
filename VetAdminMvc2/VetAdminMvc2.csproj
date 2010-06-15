@@ -122,6 +122,7 @@
     <Content Include="Views\PetManagement\AddPet.aspx" />
     <Content Include="Views\PetManagement\FindAll.aspx" />
     <Content Include="Views\PetManagement\SavePet.aspx" />
+    <Content Include="Views\PetManagement\Success.aspx" />
     <Content Include="Views\Shared\Site.Master" />
   </ItemGroup>
   <ItemGroup>
