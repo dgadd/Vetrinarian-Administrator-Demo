@@ -34,9 +34,10 @@ namespace VetAdminMvc2.Controllers
             }
             else
             {
-                ViewData.Add("message", addPetFormResponse.Error);
+                //ModelState.AddModelError(string.Empty, addPetFormResponse.Error);
+                return View("AddPet",addPetFormResponse);
+                //ViewData.Add("message", addPetFormResponse.Error);
             }
-            return View();
         }
 
         private void SavePetFormDataToRepository(AddPetFormResponse addPetFormResponse)

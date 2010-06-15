@@ -5,26 +5,11 @@
 	<b>User Story #1: Vet admin can enter pet details (register the pet)</b>
 	&nbsp;<br />
 	&nbsp;<br />
-	
+		
     <% using (Html.BeginForm("SavePet", "PetManagement")) {%>
     <fieldset>
         <legend>Fields</legend>
-        <p>
-            <%= Html.LabelFor(model => model.Name) %>
-            <%= Html.TextBoxFor(model => model.Name) %>  
-        </p>
-        <p>
-            <%= Html.LabelFor(model => model.Breed) %>
-            <%= Html.TextBoxFor(model => model.Breed) %> 
-        </p>
-        <p>
-            <%= Html.LabelFor(model => model.Age) %>
-            <%= Html.TextBoxFor(model => model.Age) %> 
-        </p>
-        <p>
-            <%= Html.LabelFor(model => model.HealthHistory) %>
-            <%= Html.TextAreaFor(model => model.HealthHistory) %>
-        </p>
+        <%=Html.EditorForModel() %>
         <p>
             <input type="submit" value="Save" />
         </p>

@@ -13,15 +13,16 @@ namespace Gaddzeit.VetAdmin.Tests.Unit.Controllers
         [Test]
         public void Constructor_NullOrEmptyProperties_ErrorPropertyReportsMissingValues()
         {
-            var apfr = new AddPetFormResponse { Name = "", Breed = "", Age = 0, HealthHistory = "breathing problems" };
+            //var apfr = new AddPetFormResponse { Name = "", Breed = "", Age = 0, HealthHistory = "breathing problems" };
 
-            var nameCheck = apfr["Name"];
-            var breekCheck = apfr["Breed"];
-            var ageCheck = apfr["Age"];
+            //var nameCheck = apfr["Name"];
+            //var breekCheck = apfr["Breed"];
+            //var ageCheck = apfr["Age"];
 
-            const string expectedErrorMessage = "Please enter the pet's name.Please enter the pet's breed.Please enter the pet's age.";
+            //const string expectedErrorMessage = "Please enter the pet's name.Please enter the pet's breed.Please enter the pet's age.";
 
-            Assert.AreEqual(expectedErrorMessage, apfr.Error);
+            //Assert.AreEqual(expectedErrorMessage, apfr.Error);
+            Assert.Fail("This test has changed--not using IDataErrorInfo on class anymore.");
         }
 
     }
