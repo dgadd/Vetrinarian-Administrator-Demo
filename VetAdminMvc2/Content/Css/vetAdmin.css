@@ -44,7 +44,7 @@
 				height:600px;
 
 }
-.tableRefined {
+.tableRefined, .grid {
 				margin:5px;
 				background-color:black;
 				color:white;
@@ -55,12 +55,21 @@
 				border-style:solid;
 				width:400px;
 }
-.tdRefined
+.trRefined, .gridrow
 {
 	color:black;
     border-width: 1px 1px 1px 1px;
     padding: 10px;
     background-color: #FFC;
+    text-align:left;
+    vertical-align:top;
+}
+.trRefined_alternate, .gridrow_alternate
+{
+	color:black;
+    border-width: 1px 1px 1px 1px;
+    padding: 10px;
+    background-color: Gray;
     text-align:left;
     vertical-align:top;
 }

@@ -38,3 +38,4 @@ C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debu
 C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\System.Data.SQLite.DLL
 C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\Gaddzeit.VetAdmin.Shared.dll
 C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\Gaddzeit.VetAdmin.Shared.pdb
+C:\SourceCode\Development\VetrinarianAdmin\Gaddzeit.VetAdmin.Tests.Unit\bin\Debug\MvcContrib.dll
