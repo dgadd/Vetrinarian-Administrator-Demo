@@ -79,17 +79,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\AddPetFormResponseTests.cs" />
     <Compile Include="Domain\DomainEntityComparerTests.cs" />
     <Compile Include="Mappings\OwnerMappingTests.cs" />
     <Compile Include="Mappings\FluentNHibernateMappingTester.cs" />
     <Compile Include="Mappings\PetMappingTests.cs" />
     <Compile Include="Presenters\AddPetPresenterTests.cs" />
     <Compile Include="Domain\AddressTests.cs" />
-    <Compile Include="Controllers\HomeControllerTests.cs" />
     <Compile Include="Presenters\HomePresenterTests.cs" />
     <Compile Include="Domain\OwnerTests.cs" />
-    <Compile Include="Controllers\PetManagementControllerTests.cs" />
     <Compile Include="Domain\PetTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\SessionFactoryBuilderTests.cs" />
@@ -114,10 +111,6 @@
     <ProjectReference Include="..\Gaddzeit.VetAdmin.View\Gaddzeit.VetAdmin.View.csproj">
       <Project>{81DE3DDC-E6C8-45FB-BF6D-2F9EA92F8359}</Project>
       <Name>Gaddzeit.VetAdmin.View</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\VetAdminMvc2\VetAdminMvc2.csproj">
-      <Project>{B8ACC5F8-66E6-45A4-838F-DBC84C4D0A8F}</Project>
-      <Name>VetAdminMvc2</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

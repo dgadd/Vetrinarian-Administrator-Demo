@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Gaddzeit.VetAdmin.Repository;
+using Gaddzeit.VetAdmin.Repository.NHibernateRepositories;
 using Gaddzeit.VetAdmin.View;
 using Gaddzeit.VetAdmin.Presenter;
 
@@ -17,7 +18,7 @@ namespace VetAdmin
 
         protected override void OnInit(EventArgs e)
         {
-            _addPetPresenter = new AddPetPresenter(new PetRepositoryFake(), this);
+            _addPetPresenter = new AddPetPresenter(new PetRepositoryNHbn(), this);
             base.OnInit(e);
         }
 
