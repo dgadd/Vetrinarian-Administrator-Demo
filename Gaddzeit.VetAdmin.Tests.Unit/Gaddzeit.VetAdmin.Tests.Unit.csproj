@@ -84,10 +84,8 @@
     <Compile Include="Mappings\OwnerMappingTests.cs" />
     <Compile Include="Mappings\FluentNHibernateMappingTester.cs" />
     <Compile Include="Mappings\PetMappingTests.cs" />
-    <Compile Include="Presenters\AddPetPresenterTests.cs" />
     <Compile Include="Domain\AddressTests.cs" />
     <Compile Include="Controllers\HomeControllerTests.cs" />
-    <Compile Include="Presenters\HomePresenterTests.cs" />
     <Compile Include="Domain\OwnerTests.cs" />
     <Compile Include="Controllers\PetManagementControllerTests.cs" />
     <Compile Include="Domain\PetTests.cs" />
