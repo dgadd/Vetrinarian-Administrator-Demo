@@ -26,7 +26,8 @@ namespace Gaddzeit.VetAdmin.Presenter
                 Breed = "beagle",
                 Age = 3,
                 Temperament = "gentle",
-                HealthHistory = "diabetes risk"
+                HealthHistory = "diabetes risk",
+                ModifiedBy = "Current User"
             };
             pet.HealthHistory = _addPetView.HealthHistory;
             _petRepository.SavePet(pet);
