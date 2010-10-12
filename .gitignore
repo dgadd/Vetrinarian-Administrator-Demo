@@ -1,15 +1,16 @@
+#OS junk files
+[Tt]humbs.db
+*.DS_Store
 
-#ignore thumbnails created by windows
-Thumbs.db
-#Ignore files build by Visual Studio
-*.obj
-*.dll
+#Visual Studio files
+*.[Oo]bj
 *.exe
 *.pdb
 *.user
 *.aps
 *.pch
 *.vspscc
+*.vssscc
 *_i.c
 *_p.c
 *.ncb
@@ -17,14 +18,28 @@ Thumbs.db
 *.tlb
 *.tlh
 *.bak
-*.cache
+*.[Cc]ache
 *.ilk
 *.log
-[Bb]in
-[Dd]ebug*/
 *.lib
 *.sbr
+*.sdf
+ipch/
 obj/
+[Bb]in
+[Dd]ebug*/
 [Rr]elease*/
+Ankh.NoLoad
+
+#Tooling
 _ReSharper*/
+*.resharper
 [Tt]est[Rr]esult*
+
+#Project files
+[Bb]uild/
+
+#Subversion files
+.svn
+
+# Office Temp Files
