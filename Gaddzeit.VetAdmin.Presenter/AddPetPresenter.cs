@@ -27,7 +27,7 @@ namespace Gaddzeit.VetAdmin.Presenter
                 Age = 3,
                 Temperament = "gentle",
                 HealthHistory = "diabetes risk",
-                ModifiedBy = "Current User"
+                ModifiedBy = "anonymous web user"
             };
             pet.HealthHistory = _addPetView.HealthHistory;
             _petRepository.SavePet(pet);
